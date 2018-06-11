@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		030016EDE5416A157E04EAE6AA626F3C /* Pods-CellDataCoupler_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8220A20D7D2C36BD1B272C69E833E65 /* Pods-CellDataCoupler_Tests-dummy.m */; };
+		0E58245AEC804871EF50CF8B819D9133 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		1AE02571385D44C80353112A0ACD9898 /* CellDataCoupler-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC354CA7D16F4F7C99036EF7A86B04B /* CellDataCoupler-dummy.m */; };
+		1CA85418122A77EEE60683A8492CE878 /* CDCTableSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB17ABF5B408E0D41C474457275150A /* CDCTableSource.swift */; };
 		20C7483B7CF160278FA93EB58B928E9B /* Pods-CellDataCoupler_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2656E79216A934ECCBDBD4384AF33A8F /* Pods-CellDataCoupler_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22692696D0AEC92D9447092DADC7E654 /* Pods-CellDataCoupler_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A460CEAEAD6F34D8F7064C7B559C0C8B /* Pods-CellDataCoupler_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		31F71D9020CF11BB00FE539C /* CDCSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F71D8F20CF11BB00FE539C /* CDCSource.swift */; };
-		31F71D9220CF11E800FE539C /* CDCBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F71D9120CF11E800FE539C /* CDCBase.swift */; };
-		31F71D9520CF190A00FE539C /* CDCBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F71D9420CF190A00FE539C /* CDCBaseTableViewCell.swift */; };
-		31F71D9720CF195800FE539C /* IdentifiableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F71D9620CF195800FE539C /* IdentifiableView.swift */; };
-		31F71D9920CF1A3B00FE539C /* CDCTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F71D9820CF1A3B00FE539C /* CDCTableViewExtension.swift */; };
-		3F23D099D3DCE5DFA0BC004BEA2C5B02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		25CDC2A7E4757B831D6DF543A707189D /* CellDataCoupler-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F88D4A06E72415DC10720E95BD492B42 /* CellDataCoupler-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54491A019F8BD3D756A5D648C876A020 /* Pods-CellDataCoupler_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 769F653BEE4DD03A84E91F22C88F9652 /* Pods-CellDataCoupler_Example-dummy.m */; };
+		5EDF3240E702FF795223FB5CCE7F8DF5 /* CDCBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0A4A618FE6D0CB924F12102761E5E2 /* CDCBaseTableViewCell.swift */; };
 		8D86077C8ADF508C907905F8310C69D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		945C990409B48E2D75EE8D6382DDA0AA /* CellDataCoupler-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 39E4C495931D324F0E200B96E20C8655 /* CellDataCoupler-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF682DC35EF11E7D7F06D6049EA8DB0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		CEA05A76074C64E667B12C0D6B5B7511 /* CellDataCoupler-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F606121A915424B7F6CDAE1A4488C023 /* CellDataCoupler-dummy.m */; };
+		B3D7F5B08138084FFE55EDDE95D329D7 /* CDCBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE95818BAAF914B3D05A14C4D55658 /* CDCBase.swift */; };
+		BDBD32EED77279F2188A3BA4819B7A02 /* CDCIdentifiableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1B6F1954170429137580909A924C0D /* CDCIdentifiableView.swift */; };
+		C9FBB1771EF5B99F5BE5DBC5B5894D54 /* CDCTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A745E02B6F5686342364211F02E39 /* CDCTableViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2870E1C33F910987F46FE1BF05D41D5D;
+			remoteGlobalIDString = 11DE06F2D153B10E6AB3F2F6E1D72684;
 			remoteInfo = CellDataCoupler;
 		};
 /* End PBXContainerItemProxy section */
@@ -43,43 +43,43 @@
 /* Begin PBXFileReference section */
 		0E6B95D90DDC052C6898C09C6B04AE3C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1127FE8D5102FA807337A770CD1E7FDF /* Pods-CellDataCoupler_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CellDataCoupler_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2334C6D7D7F5366C62E2ED8DCAA25CB1 /* CellDataCoupler.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CellDataCoupler.modulemap; sourceTree = "<group>"; };
+		19CE95818BAAF914B3D05A14C4D55658 /* CDCBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CDCBase.swift; path = CellDataCoupler/Classes/CDCBase.swift; sourceTree = "<group>"; };
+		1C94B9519D2B4E834A34BDC6685BF283 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		2656E79216A934ECCBDBD4384AF33A8F /* Pods-CellDataCoupler_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CellDataCoupler_Example-umbrella.h"; sourceTree = "<group>"; };
-		31F71D8F20CF11BB00FE539C /* CDCSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCSource.swift; sourceTree = "<group>"; };
-		31F71D9120CF11E800FE539C /* CDCBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCBase.swift; sourceTree = "<group>"; };
-		31F71D9420CF190A00FE539C /* CDCBaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCBaseTableViewCell.swift; sourceTree = "<group>"; };
-		31F71D9620CF195800FE539C /* IdentifiableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableView.swift; sourceTree = "<group>"; };
-		31F71D9820CF1A3B00FE539C /* CDCTableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDCTableViewExtension.swift; sourceTree = "<group>"; };
-		39E4C495931D324F0E200B96E20C8655 /* CellDataCoupler-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CellDataCoupler-umbrella.h"; sourceTree = "<group>"; };
+		3292A32ABEE65A7FC6A37BBB999C1412 /* CellDataCoupler.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CellDataCoupler.modulemap; sourceTree = "<group>"; };
 		3FC3EF5EEDBA8A6077875CA629D25AC4 /* Pods-CellDataCoupler_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CellDataCoupler_Example-resources.sh"; sourceTree = "<group>"; };
-		4538AAE86621639ADA4346A35B388B02 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		4E3674799F4351F1B96C5F0FB96DF24D /* Pods_CellDataCoupler_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CellDataCoupler_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		478A745E02B6F5686342364211F02E39 /* CDCTableViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CDCTableViewExtension.swift; path = CellDataCoupler/Classes/CDCTableViewExtension.swift; sourceTree = "<group>"; };
+		4AB17ABF5B408E0D41C474457275150A /* CDCTableSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CDCTableSource.swift; path = CellDataCoupler/Classes/CDCTableSource.swift; sourceTree = "<group>"; };
+		4E3674799F4351F1B96C5F0FB96DF24D /* Pods_CellDataCoupler_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CellDataCoupler_Example.framework; path = "Pods-CellDataCoupler_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51E9F3FE48D1C7828EF3BF88ADA482E4 /* Pods-CellDataCoupler_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CellDataCoupler_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5A0A4A618FE6D0CB924F12102761E5E2 /* CDCBaseTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CDCBaseTableViewCell.swift; path = CellDataCoupler/Classes/CDCBaseTableViewCell.swift; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5CDCC86C32139BA356779B5B0779FB7A /* Pods-CellDataCoupler_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CellDataCoupler_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		615F4CE13E009E0E1BB9508E65C3A302 /* CellDataCoupler-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CellDataCoupler-prefix.pch"; sourceTree = "<group>"; };
-		68E43AD7612280E51A852051143F544E /* CellDataCoupler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CellDataCoupler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68E43AD7612280E51A852051143F544E /* CellDataCoupler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CellDataCoupler.framework; path = CellDataCoupler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B1B6F1954170429137580909A924C0D /* CDCIdentifiableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CDCIdentifiableView.swift; sourceTree = "<group>"; };
+		6DC354CA7D16F4F7C99036EF7A86B04B /* CellDataCoupler-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CellDataCoupler-dummy.m"; sourceTree = "<group>"; };
 		6FC56571D2658AC46B427FB96E1A203A /* Pods-CellDataCoupler_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CellDataCoupler_Tests-resources.sh"; sourceTree = "<group>"; };
 		769F653BEE4DD03A84E91F22C88F9652 /* Pods-CellDataCoupler_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CellDataCoupler_Example-dummy.m"; sourceTree = "<group>"; };
 		7BEE95C46AB81637FD52792760E662B7 /* Pods-CellDataCoupler_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CellDataCoupler_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		7FAFEF62FF98166C96FB10B407D741C3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		811D1D40E96770D3DFD937C9CDCE78C0 /* Pods_CellDataCoupler_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CellDataCoupler_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C2E5F01D2775B415B2C682D194506AA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		811D1D40E96770D3DFD937C9CDCE78C0 /* Pods_CellDataCoupler_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CellDataCoupler_Tests.framework; path = "Pods-CellDataCoupler_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE7D25BACEDEFBC0A3626D4F5B6A31B /* Pods-CellDataCoupler_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CellDataCoupler_Example.modulemap"; sourceTree = "<group>"; };
+		8EE7349F1D265FBE7CE34CDC54673D42 /* CellDataCoupler.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = CellDataCoupler.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		938F8504E91324EAEAE93A0E841CDFDD /* Pods-CellDataCoupler_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CellDataCoupler_Tests.modulemap"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A460CEAEAD6F34D8F7064C7B559C0C8B /* Pods-CellDataCoupler_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CellDataCoupler_Tests-umbrella.h"; sourceTree = "<group>"; };
-		B0032FCE2DE8980DABB5B64582067640 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1DA2C9C2F3109EDABA072B674A87B68 /* Pods-CellDataCoupler_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CellDataCoupler_Example.release.xcconfig"; sourceTree = "<group>"; };
-		B70233FB449740364FDF9FE627CF4BDA /* CellDataCoupler.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CellDataCoupler.xcconfig; sourceTree = "<group>"; };
+		B6F4D3056B95E64FC512333A45161B82 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		B71EBAEC4752FFAB92F7B5545027D9A5 /* CellDataCoupler.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CellDataCoupler.xcconfig; sourceTree = "<group>"; };
 		B8220A20D7D2C36BD1B272C69E833E65 /* Pods-CellDataCoupler_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CellDataCoupler_Tests-dummy.m"; sourceTree = "<group>"; };
 		C159B901473D506723FE5FCC2C5B11B9 /* Pods-CellDataCoupler_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CellDataCoupler_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		C42E175915A156F76DB8B70B295ECE50 /* CellDataCoupler-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CellDataCoupler-prefix.pch"; sourceTree = "<group>"; };
 		C46AB9F4370FD07EC72F52F733CF5B0E /* Pods-CellDataCoupler_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CellDataCoupler_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CEA86AE11C5D5CF3E8F1C43D3535B11F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D74E400C71C85FF34951F9D49D31532D /* Pods-CellDataCoupler_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CellDataCoupler_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		DAEEC9117608BB7EF275764C44531C6A /* CellDataCoupler.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = CellDataCoupler.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E35597FD2907D8666493D186FBC45235 /* Pods-CellDataCoupler_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CellDataCoupler_Example-frameworks.sh"; sourceTree = "<group>"; };
 		EA64F38796B79BFB1BFD214B081FD981 /* Pods-CellDataCoupler_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CellDataCoupler_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		F606121A915424B7F6CDAE1A4488C023 /* CellDataCoupler-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CellDataCoupler-dummy.m"; sourceTree = "<group>"; };
+		F88D4A06E72415DC10720E95BD492B42 /* CellDataCoupler-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CellDataCoupler-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +99,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C369BA8E7C431C342D5D164E7EF2C28D /* Frameworks */ = {
+		7CB73AEC63DF40AC67DD0F3225D16D43 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F23D099D3DCE5DFA0BC004BEA2C5B02 /* Foundation.framework in Frameworks */,
+				0E58245AEC804871EF50CF8B819D9133 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,33 +120,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		31F71D9320CF11FE00FE539C /* Support */ = {
+		22DE031163B8C9D19CD6B4CE27CA7F8E /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				31F71D9620CF195800FE539C /* IdentifiableView.swift */,
+				6B1B6F1954170429137580909A924C0D /* CDCIdentifiableView.swift */,
 			);
-			path = Support;
+			name = Support;
+			path = CellDataCoupler/Classes/Support;
 			sourceTree = "<group>";
 		};
-		347595E4C98EB6FFCF9706B58699FBB1 /* Pod */ = {
+		3F926F25AD78E44379094120AFF48371 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DAEEC9117608BB7EF275764C44531C6A /* CellDataCoupler.podspec */,
-				7FAFEF62FF98166C96FB10B407D741C3 /* LICENSE */,
-				4538AAE86621639ADA4346A35B388B02 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		5845A8BCBAB29FAC9F5C2DFBB13F31E2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2334C6D7D7F5366C62E2ED8DCAA25CB1 /* CellDataCoupler.modulemap */,
-				B70233FB449740364FDF9FE627CF4BDA /* CellDataCoupler.xcconfig */,
-				F606121A915424B7F6CDAE1A4488C023 /* CellDataCoupler-dummy.m */,
-				615F4CE13E009E0E1BB9508E65C3A302 /* CellDataCoupler-prefix.pch */,
-				39E4C495931D324F0E200B96E20C8655 /* CellDataCoupler-umbrella.h */,
-				B0032FCE2DE8980DABB5B64582067640 /* Info.plist */,
+				3292A32ABEE65A7FC6A37BBB999C1412 /* CellDataCoupler.modulemap */,
+				B71EBAEC4752FFAB92F7B5545027D9A5 /* CellDataCoupler.xcconfig */,
+				6DC354CA7D16F4F7C99036EF7A86B04B /* CellDataCoupler-dummy.m */,
+				C42E175915A156F76DB8B70B295ECE50 /* CellDataCoupler-prefix.pch */,
+				F88D4A06E72415DC10720E95BD492B42 /* CellDataCoupler-umbrella.h */,
+				7C2E5F01D2775B415B2C682D194506AA /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/CellDataCoupler";
@@ -161,6 +152,16 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		5CECFA009CFF10236CC2AB8D3FD0A6DD /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				8EE7349F1D265FBE7CE34CDC54673D42 /* CellDataCoupler.podspec */,
+				1C94B9519D2B4E834A34BDC6685BF283 /* LICENSE */,
+				B6F4D3056B95E64FC512333A45161B82 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,38 +170,30 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5F5EF9D159AF87F9A4693B364ECEB926 /* CellDataCoupler */ = {
-			isa = PBXGroup;
-			children = (
-				31F71D9320CF11FE00FE539C /* Support */,
-				31F71D9820CF1A3B00FE539C /* CDCTableViewExtension.swift */,
-				31F71D9420CF190A00FE539C /* CDCBaseTableViewCell.swift */,
-				31F71D9120CF11E800FE539C /* CDCBase.swift */,
-				31F71D8F20CF11BB00FE539C /* CDCSource.swift */,
-				347595E4C98EB6FFCF9706B58699FBB1 /* Pod */,
-				5845A8BCBAB29FAC9F5C2DFBB13F31E2 /* Support Files */,
-			);
-			name = CellDataCoupler;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		78978B93FD69EE1FCDB342A36D24D0D0 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5F5EF9D159AF87F9A4693B364ECEB926 /* CellDataCoupler */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				78978B93FD69EE1FCDB342A36D24D0D0 /* Development Pods */,
+				E3FF66C83C693FA00D1BAE5A624FA000 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				191FFE42508830C3EA94F8D2C3F2428D /* Products */,
 				5906E82BD1B783ED6C483126599DD85B /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		ADFC6E135C23CA4E25DBE864C41C32C2 /* CellDataCoupler */ = {
+			isa = PBXGroup;
+			children = (
+				19CE95818BAAF914B3D05A14C4D55658 /* CDCBase.swift */,
+				5A0A4A618FE6D0CB924F12102761E5E2 /* CDCBaseTableViewCell.swift */,
+				4AB17ABF5B408E0D41C474457275150A /* CDCTableSource.swift */,
+				478A745E02B6F5686342364211F02E39 /* CDCTableViewExtension.swift */,
+				5CECFA009CFF10236CC2AB8D3FD0A6DD /* Pod */,
+				22DE031163B8C9D19CD6B4CE27CA7F8E /* Support */,
+				3F926F25AD78E44379094120AFF48371 /* Support Files */,
+			);
+			name = CellDataCoupler;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -229,6 +222,14 @@
 			path = "Target Support Files/Pods-CellDataCoupler_Example";
 			sourceTree = "<group>";
 		};
+		E3FF66C83C693FA00D1BAE5A624FA000 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADFC6E135C23CA4E25DBE864C41C32C2 /* CellDataCoupler */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		E4788CFE0E0994F30A8BE6AD8DCF6F07 /* Pods-CellDataCoupler_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,14 +251,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		079093AA7D22AA794BCA621CA5884574 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				945C990409B48E2D75EE8D6382DDA0AA /* CellDataCoupler-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		31F890B7382A4FAAFB0628C1DC66DB48 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,16 +267,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F68E4F1BDD9F1C3BCD63EB6AE26A9FC6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25CDC2A7E4757B831D6DF543A707189D /* CellDataCoupler-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2870E1C33F910987F46FE1BF05D41D5D /* CellDataCoupler */ = {
+		11DE06F2D153B10E6AB3F2F6E1D72684 /* CellDataCoupler */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E94950773973EF199519B47325CD125 /* Build configuration list for PBXNativeTarget "CellDataCoupler" */;
+			buildConfigurationList = 935F8ECCEB3727805935C87C77D33F5A /* Build configuration list for PBXNativeTarget "CellDataCoupler" */;
 			buildPhases = (
-				152A8C1B6152EFED2165B991169E1037 /* Sources */,
-				C369BA8E7C431C342D5D164E7EF2C28D /* Frameworks */,
-				079093AA7D22AA794BCA621CA5884574 /* Headers */,
+				826F3655E438C4E53CEABB9784FFE0A6 /* Sources */,
+				7CB73AEC63DF40AC67DD0F3225D16D43 /* Frameworks */,
+				F68E4F1BDD9F1C3BCD63EB6AE26A9FC6 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -351,7 +352,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2870E1C33F910987F46FE1BF05D41D5D /* CellDataCoupler */,
+				11DE06F2D153B10E6AB3F2F6E1D72684 /* CellDataCoupler */,
 				C5BFC5C7216F30C0CD57AC54D79547D7 /* Pods-CellDataCoupler_Example */,
 				EC88F37C3217415590E9A66A8DB079C1 /* Pods-CellDataCoupler_Tests */,
 			);
@@ -359,24 +360,24 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		152A8C1B6152EFED2165B991169E1037 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				31F71D9520CF190A00FE539C /* CDCBaseTableViewCell.swift in Sources */,
-				31F71D9720CF195800FE539C /* IdentifiableView.swift in Sources */,
-				CEA05A76074C64E667B12C0D6B5B7511 /* CellDataCoupler-dummy.m in Sources */,
-				31F71D9920CF1A3B00FE539C /* CDCTableViewExtension.swift in Sources */,
-				31F71D9020CF11BB00FE539C /* CDCSource.swift in Sources */,
-				31F71D9220CF11E800FE539C /* CDCBase.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		38A220523765ED0B40EFDD715332F8E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				030016EDE5416A157E04EAE6AA626F3C /* Pods-CellDataCoupler_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		826F3655E438C4E53CEABB9784FFE0A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3D7F5B08138084FFE55EDDE95D329D7 /* CDCBase.swift in Sources */,
+				5EDF3240E702FF795223FB5CCE7F8DF5 /* CDCBaseTableViewCell.swift in Sources */,
+				BDBD32EED77279F2188A3BA4819B7A02 /* CDCIdentifiableView.swift in Sources */,
+				1CA85418122A77EEE60683A8492CE878 /* CDCTableSource.swift in Sources */,
+				C9FBB1771EF5B99F5BE5DBC5B5894D54 /* CDCTableViewExtension.swift in Sources */,
+				1AE02571385D44C80353112A0ACD9898 /* CellDataCoupler-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,15 +401,15 @@
 		790544D70E89710B997E9BF4E40B9629 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CellDataCoupler;
-			target = 2870E1C33F910987F46FE1BF05D41D5D /* CellDataCoupler */;
+			target = 11DE06F2D153B10E6AB3F2F6E1D72684 /* CellDataCoupler */;
 			targetProxy = F41EE7F7F57452E9A788933CBE87C318 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		20C09B644AC81A37BB51966EC47D8DDC /* Release */ = {
+		0625023C401A6BAAB8D2ACDD6E7CA5B7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B70233FB449740364FDF9FE627CF4BDA /* CellDataCoupler.xcconfig */;
+			baseConfigurationReference = B71EBAEC4752FFAB92F7B5545027D9A5 /* CellDataCoupler.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -439,6 +440,38 @@
 			};
 			name = Release;
 		};
+		0B3E484CC01C1DB5207035F01DD744AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B71EBAEC4752FFAB92F7B5545027D9A5 /* CellDataCoupler.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CellDataCoupler/CellDataCoupler-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CellDataCoupler/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CellDataCoupler/CellDataCoupler.modulemap";
+				PRODUCT_MODULE_NAME = CellDataCoupler;
+				PRODUCT_NAME = CellDataCoupler;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		25E5429D956F4B08BAE0D3FA46678C70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D74E400C71C85FF34951F9D49D31532D /* Pods-CellDataCoupler_Tests.debug.xcconfig */;
@@ -466,38 +499,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		707E7FD15ADD55864717EEF3BA77D45F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B70233FB449740364FDF9FE627CF4BDA /* CellDataCoupler.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CellDataCoupler/CellDataCoupler-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CellDataCoupler/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CellDataCoupler/CellDataCoupler.modulemap";
-				PRODUCT_MODULE_NAME = CellDataCoupler;
-				PRODUCT_NAME = CellDataCoupler;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -759,11 +760,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E94950773973EF199519B47325CD125 /* Build configuration list for PBXNativeTarget "CellDataCoupler" */ = {
+		935F8ECCEB3727805935C87C77D33F5A /* Build configuration list for PBXNativeTarget "CellDataCoupler" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				707E7FD15ADD55864717EEF3BA77D45F /* Debug */,
-				20C09B644AC81A37BB51966EC47D8DDC /* Release */,
+				0B3E484CC01C1DB5207035F01DD744AC /* Debug */,
+				0625023C401A6BAAB8D2ACDD6E7CA5B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

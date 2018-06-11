@@ -8,7 +8,7 @@
 import UIKit
 
 extension UITableView {
-    func getCell<T: CDCBaseReusableCell>() -> T {
+    public func getCell<T: CDCBaseReusableCell>() -> T {
         var cell = self.dequeueReusableCell(withIdentifier: T.defaultReuseIdentifier)
         if cell == nil {
             self.register(UINib(nibName: T.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: T.defaultReuseIdentifier)
@@ -24,7 +24,7 @@ extension UITableView {
     
     //Nib initialization
     
-    func getCell<T: CDCBaseReusableCell>(forType: T.Type) -> T {
+    public func getCell<T: CDCBaseReusableCell>(forType: T.Type) -> T {
         var cell = self.dequeueReusableCell(withIdentifier: forType.defaultReuseIdentifier)
         if cell == nil {
             self.register(UINib(nibName: forType.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: forType.defaultReuseIdentifier)
@@ -38,7 +38,7 @@ extension UITableView {
         return cell as! T
     }
     
-    func setupCell(info: CDCBaseCoupler) -> CDCBaseReusableCell {
+    public func setupCell(info: CDCBaseCoupler) -> CDCBaseReusableCell {
         let output = getCell(forType: info.cellType)
         if info.didSelect == nil {
             output.selectionStyle = .none

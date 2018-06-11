@@ -7,10 +7,10 @@
 
 import UIKit
 
-class CDCBaseTableViewCell: UITableViewCell {
-    var selectionColor: UIColor?
+open class CDCBaseTableViewCell: UITableViewCell {
+    public var selectionColor: UIColor?
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         //Default values - changing the selection color after the fact (such as in the setup method) will take precedence over this default behavior
@@ -26,7 +26,7 @@ class CDCBaseTableViewCell: UITableViewCell {
         }
     }
     
-    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
+    open override func setHighlighted(_ highlighted: Bool, animated: Bool) {
         if highlighted == true {
             if animated == true {
                 UIView.animate(withDuration: 0.3, animations: {
@@ -48,7 +48,7 @@ class CDCBaseTableViewCell: UITableViewCell {
         }
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    open override func setSelected(_ selected: Bool, animated: Bool) {
         if selected == true {
             if animated == true {
                 UIView.animate(withDuration: 0.3, animations: {

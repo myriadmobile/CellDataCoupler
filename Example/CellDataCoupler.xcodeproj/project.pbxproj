@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		31F71D8C20CF101A00FE539C /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F71D8B20CF101A00FE539C /* Presenter.swift */; };
 		31F71D8E20CF10B400FE539C /* TableSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F71D8D20CF10B400FE539C /* TableSource.swift */; };
+		31F71D9B20CF28D200FE539C /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F71D9A20CF28D200FE539C /* PersonCell.swift */; };
+		31F71D9E20CF28EA00FE539C /* FormTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F71D9D20CF28EA00FE539C /* FormTestCell.swift */; };
 		52A83FC8A6C52E9AB7208BD3 /* Pods_CellDataCoupler_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C1C257B24063506DE8138 /* Pods_CellDataCoupler_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -34,6 +36,8 @@
 		1D809FB0B214F402E02DDAF1 /* Pods-CellDataCoupler_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CellDataCoupler_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CellDataCoupler_Tests/Pods-CellDataCoupler_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		31F71D8B20CF101A00FE539C /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		31F71D8D20CF10B400FE539C /* TableSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSource.swift; sourceTree = "<group>"; };
+		31F71D9A20CF28D200FE539C /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		31F71D9D20CF28EA00FE539C /* FormTestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTestCell.swift; sourceTree = "<group>"; };
 		597C3F8F0709092C259ACCDC /* Pods-CellDataCoupler_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CellDataCoupler_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CellDataCoupler_Tests/Pods-CellDataCoupler_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CellDataCoupler_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellDataCoupler_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +97,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		31F71D9C20CF28D400FE539C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				31F71D9D20CF28EA00FE539C /* FormTestCell.swift */,
+				31F71D9A20CF28D200FE539C /* PersonCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +130,7 @@
 		607FACD21AFB9204008FA782 /* Example for CellDataCoupler */ = {
 			isa = PBXGroup;
 			children = (
+				31F71D9C20CF28D400FE539C /* Cells */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				31F71D8B20CF101A00FE539C /* Presenter.swift */,
 				31F71D8D20CF10B400FE539C /* TableSource.swift */,
@@ -176,7 +190,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				A1F507D2BD355029F9338B1E /* [CP] Embed Pods Frameworks */,
+				2D978B086DBD143A29262C81 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,6 +281,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2D978B086DBD143A29262C81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CellDataCoupler_Example/Pods-CellDataCoupler_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CellDataCoupler/CellDataCoupler.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CellDataCoupler.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CellDataCoupler_Example/Pods-CellDataCoupler_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9D7BFF70EAB86E673F8DE9A3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,24 +315,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A1F507D2BD355029F9338B1E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CellDataCoupler_Example/Pods-CellDataCoupler_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CellDataCoupler/CellDataCoupler.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CellDataCoupler.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CellDataCoupler_Example/Pods-CellDataCoupler_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B3883D6CC8FFC076C4539C95 /* [CP] Check Pods Manifest.lock */ = {
@@ -329,7 +343,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				31F71D8C20CF101A00FE539C /* Presenter.swift in Sources */,
+				31F71D9B20CF28D200FE539C /* PersonCell.swift in Sources */,
 				31F71D8E20CF10B400FE539C /* TableSource.swift in Sources */,
+				31F71D9E20CF28EA00FE539C /* FormTestCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
