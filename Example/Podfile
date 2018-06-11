@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CellDataCoupler_Example' do
+  pod 'CellDataCoupler', :path => '../'
+
+  target 'CellDataCoupler_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

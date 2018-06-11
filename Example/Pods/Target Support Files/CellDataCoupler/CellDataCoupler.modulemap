@@ -1,0 +1,6 @@
+framework module CellDataCoupler {
+  umbrella header "CellDataCoupler-umbrella.h"
+
+  export *
+  module * { export * }
+}

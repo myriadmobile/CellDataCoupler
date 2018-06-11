@@ -1,0 +1,22 @@
+{
+  "name": "CellDataCoupler",
+  "version": "0.1.0",
+  "summary": "A short description of CellDataCoupler.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Alex Larson/CellDataCoupler",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Alex Larson": "alarson@myriadmobile.com"
+  },
+  "source": {
+    "git": "https://github.com/Alex Larson/CellDataCoupler.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CellDataCoupler/Classes/**/*"
+}
