@@ -23,22 +23,35 @@ open class CouplerTableSource: NSObject {
     
     
     //Setters
-    open func set(sections: [CouplerSection]) {
+    open func set(sections: [CouplerSection], withReload: Bool = true) {
         self.sections = sections
+        
+        if withReload == true {
+            tableview.reloadData()
+        }
     }
     
-    open func set(couplers: [BaseCoupler]) {
+    open func set(couplers: [BaseCoupler], withReload: Bool = true) {
         self.sections = [CouplerSection(nil, couplers)]
+        
+        if withReload == true {
+            tableview.reloadData()
+        }
     }
     
-    open func set<T>(with items: [T], cellType: ReusableCell<T>.Type, didSelect: ((T) -> Void)? = nil) {
+    open func set<T>(with items: [T], cellType: ReusableCell<T>.Type, didSelect: ((T) -> Void)? = nil, withReload: Bool = true) {
         var couplers: [Coupler<T>] = []
         for item in items {
             couplers.append(Coupler(cellType, item) { (indexPath: IndexPath) -> Void in
                 didSelect?(item)
             })
         }
+        
         self.sections = [CouplerSection(nil, couplers)]
+        
+        if withReload == true {
+            tableview.reloadData()
+        }
     }
 }
 

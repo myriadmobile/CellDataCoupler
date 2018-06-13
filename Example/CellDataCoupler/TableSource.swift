@@ -28,7 +28,7 @@ class TableSource: CouplerTableSource {
             print("Testing")
         }
         
-        set(sections: [CouplerSection("Testing", [name, home, generic])])
-        tableview.reloadData()
+        set(sections: [CouplerSection("Testing", [name, home, generic])], withReload: false)
+        tableview.reloadSections([0], with: .automatic)
     }
 }
