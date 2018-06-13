@@ -1,5 +1,5 @@
 //
-//  CDCTableViewExtension.swift
+//  TableViewExtension.swift
 //
 //  Created by Alex Larson on 12/14/17.
 //  Copyright © 2017 Myriad Mobile. All rights reserved.
@@ -8,7 +8,7 @@
 import UIKit
 
 extension UITableView {
-    public func getCell<T: CDCBaseReusableCell>() -> T {
+    public func getCell<T: BaseReusableCell>() -> T {
         var cell = self.dequeueReusableCell(withIdentifier: T.defaultReuseIdentifier)
         if cell == nil {
             self.register(UINib(nibName: T.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: T.defaultReuseIdentifier)
@@ -24,7 +24,7 @@ extension UITableView {
     
     //Nib initialization
     
-    public func getCell<T: CDCBaseReusableCell>(forType: T.Type) -> T {
+    public func getCell<T: BaseReusableCell>(forType: T.Type) -> T {
         var cell = self.dequeueReusableCell(withIdentifier: forType.defaultReuseIdentifier)
         if cell == nil {
             self.register(UINib(nibName: forType.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: forType.defaultReuseIdentifier)
@@ -38,7 +38,7 @@ extension UITableView {
         return cell as! T
     }
     
-    public func setupCell(info: CDCBaseCoupler) -> CDCBaseReusableCell {
+    public func setupCell(info: BaseCoupler) -> BaseReusableCell {
         let output = getCell(forType: info.cellType)
         if info.didSelect == nil {
             output.selectionStyle = .none

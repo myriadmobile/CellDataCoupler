@@ -12,7 +12,7 @@ import CellDataCoupler
 protocol TableDelegate: class {
 }
 
-class TableSource: CDCTableSource {
+class TableSource: CouplerTableSource {
     
     weak var delegate: TableDelegate?
     
@@ -22,13 +22,13 @@ class TableSource: CDCTableSource {
     }
     
     func updatePerson(_ person: Person?) {
-        let name = CDCCoupler(FormTestCell.self, "Name: \(person?.name ?? "-")")
-        let home = CDCCoupler(FormTestCell.self, "Homeworld: \(person?.test ?? "-")")
-        let generic = CDCCoupler(PersonCell.self, PersonCellData(person, nil)) { (indexPath) -> Void in
+        let name = Coupler(FormTestCell.self, "Name: \(person?.name ?? "-")")
+        let home = Coupler(FormTestCell.self, "Homeworld: \(person?.test ?? "-")")
+        let generic = Coupler(PersonCell.self, PersonCellData(person, nil)) { (indexPath) -> Void in
             print("Testing")
         }
         
-        set(sections: [CDCSection("Testing", [name, home, generic])])
+        set(sections: [CouplerSection("Testing", [name, home, generic])])
         tableview.reloadData()
     }
 }

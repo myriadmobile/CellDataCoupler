@@ -11,6 +11,7 @@
 		31F71D8E20CF10B400FE539C /* TableSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F71D8D20CF10B400FE539C /* TableSource.swift */; };
 		31F71D9B20CF28D200FE539C /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F71D9A20CF28D200FE539C /* PersonCell.swift */; };
 		31F71D9E20CF28EA00FE539C /* FormTestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F71D9D20CF28EA00FE539C /* FormTestCell.swift */; };
+		31F71DA520D18F6100FE539C /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F71DA420D18F6100FE539C /* BaseTableViewCell.swift */; };
 		52A83FC8A6C52E9AB7208BD3 /* Pods_CellDataCoupler_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C1C257B24063506DE8138 /* Pods_CellDataCoupler_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		31F71D8D20CF10B400FE539C /* TableSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSource.swift; sourceTree = "<group>"; };
 		31F71D9A20CF28D200FE539C /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		31F71D9D20CF28EA00FE539C /* FormTestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTestCell.swift; sourceTree = "<group>"; };
+		31F71DA420D18F6100FE539C /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		597C3F8F0709092C259ACCDC /* Pods-CellDataCoupler_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CellDataCoupler_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CellDataCoupler_Tests/Pods-CellDataCoupler_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CellDataCoupler_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellDataCoupler_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		607FACD21AFB9204008FA782 /* Example for CellDataCoupler */ = {
 			isa = PBXGroup;
 			children = (
+				31F71DA420D18F6100FE539C /* BaseTableViewCell.swift */,
 				31F71D9C20CF28D400FE539C /* Cells */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				31F71D8B20CF101A00FE539C /* Presenter.swift */,
@@ -346,6 +349,7 @@
 				31F71D9B20CF28D200FE539C /* PersonCell.swift in Sources */,
 				31F71D8E20CF10B400FE539C /* TableSource.swift in Sources */,
 				31F71D9E20CF28EA00FE539C /* FormTestCell.swift in Sources */,
+				31F71DA520D18F6100FE539C /* BaseTableViewCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

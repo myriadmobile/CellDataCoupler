@@ -11,7 +11,7 @@ import CellDataCoupler
 
 typealias PersonCellData = (person: Person?, action: ((Person) -> Void)?)
 
-class PersonCell: CDCReusableCell<PersonCellData> {
+class PersonCell: BaseTableViewCell<PersonCellData> {
     
     @IBOutlet weak var myLabel: UILabel!
     

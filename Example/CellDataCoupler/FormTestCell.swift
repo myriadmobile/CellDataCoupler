@@ -9,7 +9,7 @@
 import UIKit
 import CellDataCoupler
 
-class FormTestCell: CDCReusableCell<String> {
+class FormTestCell: BaseTableViewCell<String> {
     
     @IBOutlet weak var myLabel: UILabel!
     

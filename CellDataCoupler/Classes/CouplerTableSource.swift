@@ -1,5 +1,5 @@
 //
-//  CDCTableSource.swift
+//  CouplerTableSource.swift
 //
 //  Created by Jorny on 5/30/18.
 //  Copyright © 2018 Myriad Mobile. All rights reserved.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-open class CDCTableSource: NSObject {
-    private var sections: [CDCSection] = []
+open class CouplerTableSource: NSObject {
+    private var sections: [CouplerSection] = []
     public var tableview: UITableView
     
     //Init
@@ -23,26 +23,26 @@ open class CDCTableSource: NSObject {
     
     
     //Setters
-    open func set(sections: [CDCSection]) {
+    open func set(sections: [CouplerSection]) {
         self.sections = sections
     }
     
-    open func set(couplers: [CDCBaseCoupler]) {
-        self.sections = [CDCSection(nil, couplers)]
+    open func set(couplers: [BaseCoupler]) {
+        self.sections = [CouplerSection(nil, couplers)]
     }
     
-    open func set<T>(with items: [T], cellType: CDCReusableCell<T>.Type, didSelect: ((T) -> Void)? = nil) {
-        var couplers: [CDCCoupler<T>] = []
+    open func set<T>(with items: [T], cellType: ReusableCell<T>.Type, didSelect: ((T) -> Void)? = nil) {
+        var couplers: [Coupler<T>] = []
         for item in items {
-            couplers.append(CDCCoupler(cellType, item) { (indexPath: IndexPath) -> Void in
+            couplers.append(Coupler(cellType, item) { (indexPath: IndexPath) -> Void in
                 didSelect?(item)
             })
         }
-        self.sections = [CDCSection(nil, couplers)]
+        self.sections = [CouplerSection(nil, couplers)]
     }
 }
 
-extension CDCTableSource: UITableViewDataSource {
+extension CouplerTableSource: UITableViewDataSource {
     open func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
@@ -66,7 +66,7 @@ extension CDCTableSource: UITableViewDataSource {
     }
 }
 
-extension CDCTableSource: UITableViewDelegate {
+extension CouplerTableSource: UITableViewDelegate {
     open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         sections[indexPath.section].couplers[indexPath.row].didSelect?(indexPath)

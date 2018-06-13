@@ -7,19 +7,19 @@
 
 import UIKit
 
-open class CDCBaseReusableCell: CDCBaseTableViewCell, CDCIdentifiableView {
+open class BaseReusableCell: UITableViewCell, IdentifiableView {
     open func setupAny(_ info: Any?) {
         print("Warning: You need to override the setup method.")
     }
 }
 
-open class CDCReusableCell<T> : CDCBaseReusableCell {
+open class ReusableCell<T> : BaseReusableCell {
     open func setup(_ info: T?) {
         print("Warning: You need to override the setup method.")
     }
     
     open override func setupAny(_ info: Any?) {
-        if let info = info as? CDCCoupler<T> {
+        if let info = info as? Coupler<T> {
             setup(info.data)
         } else if info != nil {
             print("Warning: The data type was not as expected for the ReusableCell.")
@@ -29,30 +29,30 @@ open class CDCReusableCell<T> : CDCBaseReusableCell {
     }
 }
 
-open class CDCBaseCoupler: NSObject {
-    public var cellType: CDCBaseReusableCell.Type
+open class BaseCoupler: NSObject {
+    public var cellType: BaseReusableCell.Type
     public var didSelect: ((IndexPath) -> Void)?
     
-    public init(cellType: CDCBaseReusableCell.Type, didSelect: ((IndexPath) -> Void)? = nil) {
+    public init(cellType: BaseReusableCell.Type, didSelect: ((IndexPath) -> Void)? = nil) {
         self.cellType = cellType
         self.didSelect = didSelect
     }
 }
 
-open class CDCCoupler<T>: CDCBaseCoupler {
+open class Coupler<T>: BaseCoupler {
     public let data: T?
     
-    public init(_ cellType: CDCReusableCell<T>.Type, _ data: T?, didSelect: ((IndexPath) -> Void)? = nil) {
+    public init(_ cellType: ReusableCell<T>.Type, _ data: T?, didSelect: ((IndexPath) -> Void)? = nil) {
         self.data = data
         super.init(cellType: cellType, didSelect: didSelect)
     }
 }
 
-open class CDCSection {
+open class CouplerSection {
     public var title: String?
-    public var couplers: [CDCBaseCoupler] = []
+    public var couplers: [BaseCoupler] = []
     
-    public init(_ title: String?, _ couplers: [CDCBaseCoupler]) {
+    public init(_ title: String?, _ couplers: [BaseCoupler]) {
         self.title = title
         self.couplers = couplers
     }

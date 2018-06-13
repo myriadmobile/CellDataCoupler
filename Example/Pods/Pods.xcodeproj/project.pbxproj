@@ -10,17 +10,16 @@
 		030016EDE5416A157E04EAE6AA626F3C /* Pods-CellDataCoupler_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8220A20D7D2C36BD1B272C69E833E65 /* Pods-CellDataCoupler_Tests-dummy.m */; };
 		0E58245AEC804871EF50CF8B819D9133 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		1AE02571385D44C80353112A0ACD9898 /* CellDataCoupler-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC354CA7D16F4F7C99036EF7A86B04B /* CellDataCoupler-dummy.m */; };
-		1CA85418122A77EEE60683A8492CE878 /* CDCTableSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB17ABF5B408E0D41C474457275150A /* CDCTableSource.swift */; };
+		1CA85418122A77EEE60683A8492CE878 /* CouplerTableSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB17ABF5B408E0D41C474457275150A /* CouplerTableSource.swift */; };
 		20C7483B7CF160278FA93EB58B928E9B /* Pods-CellDataCoupler_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2656E79216A934ECCBDBD4384AF33A8F /* Pods-CellDataCoupler_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22692696D0AEC92D9447092DADC7E654 /* Pods-CellDataCoupler_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A460CEAEAD6F34D8F7064C7B559C0C8B /* Pods-CellDataCoupler_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25CDC2A7E4757B831D6DF543A707189D /* CellDataCoupler-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F88D4A06E72415DC10720E95BD492B42 /* CellDataCoupler-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54491A019F8BD3D756A5D648C876A020 /* Pods-CellDataCoupler_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 769F653BEE4DD03A84E91F22C88F9652 /* Pods-CellDataCoupler_Example-dummy.m */; };
-		5EDF3240E702FF795223FB5CCE7F8DF5 /* CDCBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0A4A618FE6D0CB924F12102761E5E2 /* CDCBaseTableViewCell.swift */; };
 		8D86077C8ADF508C907905F8310C69D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		AF682DC35EF11E7D7F06D6049EA8DB0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		B3D7F5B08138084FFE55EDDE95D329D7 /* CDCBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE95818BAAF914B3D05A14C4D55658 /* CDCBase.swift */; };
-		BDBD32EED77279F2188A3BA4819B7A02 /* CDCIdentifiableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1B6F1954170429137580909A924C0D /* CDCIdentifiableView.swift */; };
-		C9FBB1771EF5B99F5BE5DBC5B5894D54 /* CDCTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A745E02B6F5686342364211F02E39 /* CDCTableViewExtension.swift */; };
+		B3D7F5B08138084FFE55EDDE95D329D7 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE95818BAAF914B3D05A14C4D55658 /* Base.swift */; };
+		BDBD32EED77279F2188A3BA4819B7A02 /* IdentifiableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1B6F1954170429137580909A924C0D /* IdentifiableView.swift */; };
+		C9FBB1771EF5B99F5BE5DBC5B5894D54 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478A745E02B6F5686342364211F02E39 /* TableViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,33 +42,32 @@
 /* Begin PBXFileReference section */
 		0E6B95D90DDC052C6898C09C6B04AE3C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1127FE8D5102FA807337A770CD1E7FDF /* Pods-CellDataCoupler_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CellDataCoupler_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		19CE95818BAAF914B3D05A14C4D55658 /* CDCBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CDCBase.swift; path = CellDataCoupler/Classes/CDCBase.swift; sourceTree = "<group>"; };
-		1C94B9519D2B4E834A34BDC6685BF283 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		19CE95818BAAF914B3D05A14C4D55658 /* Base.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Base.swift; path = CellDataCoupler/Classes/Base.swift; sourceTree = "<group>"; };
+		1C94B9519D2B4E834A34BDC6685BF283 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2656E79216A934ECCBDBD4384AF33A8F /* Pods-CellDataCoupler_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CellDataCoupler_Example-umbrella.h"; sourceTree = "<group>"; };
 		3292A32ABEE65A7FC6A37BBB999C1412 /* CellDataCoupler.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CellDataCoupler.modulemap; sourceTree = "<group>"; };
 		3FC3EF5EEDBA8A6077875CA629D25AC4 /* Pods-CellDataCoupler_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CellDataCoupler_Example-resources.sh"; sourceTree = "<group>"; };
-		478A745E02B6F5686342364211F02E39 /* CDCTableViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CDCTableViewExtension.swift; path = CellDataCoupler/Classes/CDCTableViewExtension.swift; sourceTree = "<group>"; };
-		4AB17ABF5B408E0D41C474457275150A /* CDCTableSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CDCTableSource.swift; path = CellDataCoupler/Classes/CDCTableSource.swift; sourceTree = "<group>"; };
-		4E3674799F4351F1B96C5F0FB96DF24D /* Pods_CellDataCoupler_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CellDataCoupler_Example.framework; path = "Pods-CellDataCoupler_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		478A745E02B6F5686342364211F02E39 /* TableViewExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableViewExtension.swift; path = CellDataCoupler/Classes/TableViewExtension.swift; sourceTree = "<group>"; };
+		4AB17ABF5B408E0D41C474457275150A /* CouplerTableSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CouplerTableSource.swift; path = CellDataCoupler/Classes/CouplerTableSource.swift; sourceTree = "<group>"; };
+		4E3674799F4351F1B96C5F0FB96DF24D /* Pods_CellDataCoupler_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CellDataCoupler_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51E9F3FE48D1C7828EF3BF88ADA482E4 /* Pods-CellDataCoupler_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CellDataCoupler_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		5A0A4A618FE6D0CB924F12102761E5E2 /* CDCBaseTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CDCBaseTableViewCell.swift; path = CellDataCoupler/Classes/CDCBaseTableViewCell.swift; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5CDCC86C32139BA356779B5B0779FB7A /* Pods-CellDataCoupler_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CellDataCoupler_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		68E43AD7612280E51A852051143F544E /* CellDataCoupler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CellDataCoupler.framework; path = CellDataCoupler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B1B6F1954170429137580909A924C0D /* CDCIdentifiableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CDCIdentifiableView.swift; sourceTree = "<group>"; };
+		68E43AD7612280E51A852051143F544E /* CellDataCoupler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CellDataCoupler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B1B6F1954170429137580909A924C0D /* IdentifiableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IdentifiableView.swift; sourceTree = "<group>"; };
 		6DC354CA7D16F4F7C99036EF7A86B04B /* CellDataCoupler-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CellDataCoupler-dummy.m"; sourceTree = "<group>"; };
 		6FC56571D2658AC46B427FB96E1A203A /* Pods-CellDataCoupler_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CellDataCoupler_Tests-resources.sh"; sourceTree = "<group>"; };
 		769F653BEE4DD03A84E91F22C88F9652 /* Pods-CellDataCoupler_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CellDataCoupler_Example-dummy.m"; sourceTree = "<group>"; };
 		7BEE95C46AB81637FD52792760E662B7 /* Pods-CellDataCoupler_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CellDataCoupler_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7C2E5F01D2775B415B2C682D194506AA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		811D1D40E96770D3DFD937C9CDCE78C0 /* Pods_CellDataCoupler_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CellDataCoupler_Tests.framework; path = "Pods-CellDataCoupler_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		811D1D40E96770D3DFD937C9CDCE78C0 /* Pods_CellDataCoupler_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CellDataCoupler_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE7D25BACEDEFBC0A3626D4F5B6A31B /* Pods-CellDataCoupler_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CellDataCoupler_Example.modulemap"; sourceTree = "<group>"; };
-		8EE7349F1D265FBE7CE34CDC54673D42 /* CellDataCoupler.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = CellDataCoupler.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8EE7349F1D265FBE7CE34CDC54673D42 /* CellDataCoupler.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = CellDataCoupler.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		938F8504E91324EAEAE93A0E841CDFDD /* Pods-CellDataCoupler_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CellDataCoupler_Tests.modulemap"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A460CEAEAD6F34D8F7064C7B559C0C8B /* Pods-CellDataCoupler_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CellDataCoupler_Tests-umbrella.h"; sourceTree = "<group>"; };
 		B1DA2C9C2F3109EDABA072B674A87B68 /* Pods-CellDataCoupler_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CellDataCoupler_Example.release.xcconfig"; sourceTree = "<group>"; };
-		B6F4D3056B95E64FC512333A45161B82 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		B6F4D3056B95E64FC512333A45161B82 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B71EBAEC4752FFAB92F7B5545027D9A5 /* CellDataCoupler.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CellDataCoupler.xcconfig; sourceTree = "<group>"; };
 		B8220A20D7D2C36BD1B272C69E833E65 /* Pods-CellDataCoupler_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CellDataCoupler_Tests-dummy.m"; sourceTree = "<group>"; };
 		C159B901473D506723FE5FCC2C5B11B9 /* Pods-CellDataCoupler_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CellDataCoupler_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -123,7 +121,7 @@
 		22DE031163B8C9D19CD6B4CE27CA7F8E /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				6B1B6F1954170429137580909A924C0D /* CDCIdentifiableView.swift */,
+				6B1B6F1954170429137580909A924C0D /* IdentifiableView.swift */,
 			);
 			name = Support;
 			path = CellDataCoupler/Classes/Support;
@@ -184,10 +182,9 @@
 		ADFC6E135C23CA4E25DBE864C41C32C2 /* CellDataCoupler */ = {
 			isa = PBXGroup;
 			children = (
-				19CE95818BAAF914B3D05A14C4D55658 /* CDCBase.swift */,
-				5A0A4A618FE6D0CB924F12102761E5E2 /* CDCBaseTableViewCell.swift */,
-				4AB17ABF5B408E0D41C474457275150A /* CDCTableSource.swift */,
-				478A745E02B6F5686342364211F02E39 /* CDCTableViewExtension.swift */,
+				19CE95818BAAF914B3D05A14C4D55658 /* Base.swift */,
+				4AB17ABF5B408E0D41C474457275150A /* CouplerTableSource.swift */,
+				478A745E02B6F5686342364211F02E39 /* TableViewExtension.swift */,
 				5CECFA009CFF10236CC2AB8D3FD0A6DD /* Pod */,
 				22DE031163B8C9D19CD6B4CE27CA7F8E /* Support */,
 				3F926F25AD78E44379094120AFF48371 /* Support Files */,
@@ -372,11 +369,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3D7F5B08138084FFE55EDDE95D329D7 /* CDCBase.swift in Sources */,
-				5EDF3240E702FF795223FB5CCE7F8DF5 /* CDCBaseTableViewCell.swift in Sources */,
-				BDBD32EED77279F2188A3BA4819B7A02 /* CDCIdentifiableView.swift in Sources */,
-				1CA85418122A77EEE60683A8492CE878 /* CDCTableSource.swift in Sources */,
-				C9FBB1771EF5B99F5BE5DBC5B5894D54 /* CDCTableViewExtension.swift in Sources */,
+				B3D7F5B08138084FFE55EDDE95D329D7 /* Base.swift in Sources */,
+				BDBD32EED77279F2188A3BA4819B7A02 /* IdentifiableView.swift in Sources */,
+				1CA85418122A77EEE60683A8492CE878 /* CouplerTableSource.swift in Sources */,
+				C9FBB1771EF5B99F5BE5DBC5B5894D54 /* TableViewExtension.swift in Sources */,
 				1AE02571385D44C80353112A0ACD9898 /* CellDataCoupler-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
