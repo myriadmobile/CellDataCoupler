@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CellDataCoupler'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'CellDataCoupler is a pod that abstracts away a lot of the logic involved in creating a viable table datasource.'
 
 
@@ -19,7 +19,7 @@ DESC
   s.homepage         = 'https://github.com/myriadmobile/CellDataCoupler'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Alex Larson' => 'alarson@myriadmobile.com' }
-  s.source           = { :git => 'https://github.com/myriadmobile/CellDataCoupler', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/myriadmobile/CellDataCoupler.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
 
