@@ -8,7 +8,7 @@
 import Foundation
 
 open class CouplerTableSource: NSObject {
-    private var sections: [CouplerSection] = []
+    fileprivate var sections: [CouplerSection] = []
     public var tableview: UITableView
     
     //Init
