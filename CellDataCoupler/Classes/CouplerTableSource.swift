@@ -18,7 +18,6 @@ open class CouplerTableSource: NSObject {
         
         self.tableview.delegate = self
         self.tableview.dataSource = self
-        self.tableview.rowHeight = UITableViewAutomaticDimension
     }
     
     
@@ -70,12 +69,6 @@ extension CouplerTableSource: UITableViewDataSource {
     
     open func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sections[section].title
-    }
-    
-    open func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        let row = sections[indexPath.section].couplers[indexPath.row]
-        let cell = tableView.getCell(forType: row.cellType)
-        return cell.frame.height
     }
 }
 
