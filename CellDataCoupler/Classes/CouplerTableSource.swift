@@ -8,7 +8,7 @@
 import Foundation
 
 open class CouplerTableSource: NSObject {
-    public var sections: [CouplerSection] = []
+    public var sections: [BaseSection] = []
     public var tableview: UITableView
     
     //Init
@@ -22,7 +22,7 @@ open class CouplerTableSource: NSObject {
     
     
     //Setters
-    open func set(sections: [CouplerSection], withReload: Bool = true) {
+    open func set(sections: [BaseSection], withReload: Bool = true) {
         self.sections = sections
         
         if withReload == true {
@@ -31,7 +31,7 @@ open class CouplerTableSource: NSObject {
     }
     
     open func set(couplers: [BaseCoupler], withReload: Bool = true) {
-        self.sections = [CouplerSection(nil, couplers)]
+        self.sections = [BaseSection(couplers: couplers)]
         
         if withReload == true {
             tableview.reloadData()
@@ -46,7 +46,7 @@ open class CouplerTableSource: NSObject {
             })
         }
         
-        self.sections = [CouplerSection(nil, couplers)]
+        self.sections = [BaseSection(couplers: couplers)]
         
         if withReload == true {
             tableview.reloadData()
@@ -68,7 +68,11 @@ extension CouplerTableSource: UITableViewDataSource {
     }
     
     open func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sections[section].title
+        return ""//sections[section].sectionData as? String
+    }
+    
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return nil//tableView.setupCell(info: sections[section])
     }
 }
 

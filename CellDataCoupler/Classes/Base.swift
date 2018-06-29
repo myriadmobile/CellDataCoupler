@@ -29,9 +29,10 @@ open class ReusableCell<T> : BaseReusableCell {
     }
 }
 
+//Cell
 open class BaseCoupler: NSObject {
-    public var cellType: BaseReusableCell.Type
-    public var didSelect: ((IndexPath) -> Void)?
+    public let cellType: BaseReusableCell.Type
+    public let didSelect: ((IndexPath) -> Void)?
     
     public init(cellType: BaseReusableCell.Type, didSelect: ((IndexPath) -> Void)? = nil) {
         self.cellType = cellType
@@ -48,12 +49,25 @@ open class Coupler<T>: BaseCoupler {
     }
 }
 
-open class CouplerSection {
-    public var title: String?
-    public var couplers: [BaseCoupler] = []
+//Section
+open class BaseSection: NSObject {
+    public let couplers: [BaseCoupler]
     
-    public init(_ title: String?, _ couplers: [BaseCoupler]) {
-        self.title = title
+    public init(couplers: [BaseCoupler]) {
         self.couplers = couplers
+    }
+}
+
+open class CouplerSection<T>: BaseSection {
+    public let headerType: BaseReusableCell.Type?
+    public let headerData: T?
+    
+    public var footerType: BaseReusableCell.Type?
+    public var footerData: T?
+    
+    public init(_ headerType: ReusableCell<T>.Type?, _ headerData: T?, _ couplers: [BaseCoupler]) {
+        self.headerType = headerType
+        self.headerData = headerData
+        super.init(couplers: couplers)
     }
 }
