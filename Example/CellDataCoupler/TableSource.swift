@@ -22,14 +22,24 @@ class TableSource: CouplerTableSource {
     }
     
     func updatePerson(_ person: Person?) {
-        let name = Coupler(FormTestCell.self, "Name: \(person?.name ?? "-")")
-        let home = Coupler(FormTestCell.self, "Homeworld: \(person?.test ?? "-")")
-        let generic = Coupler(PersonCell.self, PersonCellData(person, nil)) { (indexPath) -> Void in
+        //Test Section
+        let name = CellCoupler(FormTestCell.self, "Name: \(person?.name ?? "-")")
+        let home = CellCoupler(FormTestCell.self, "Homeworld: \(person?.test ?? "-")")
+        let generic = CellCoupler(PersonCell.self, PersonCellData(person, nil)) { (indexPath) -> Void in
             print("Testing")
         }
         
-//        let mySection = CouplerSection()
-        set(sections: [CouplerSection("Testing", [name, home, generic])], withReload: false)
-        tableview.reloadSections([0], with: .automatic)
+        let testSectionHeader = CellCoupler(SectionHeaderCell.self, "Test Section Test Section Test Section Test Section Test Section Test Section Test Section")
+        let testSection = CellCouplerSection(header: testSectionHeader, couplers: [name, home, generic])
+        
+        //Other Section
+        let other = CellCoupler(FormTestCell.self, "Some other cell")
+        
+        let otherSectionHeader = CellCoupler(SectionHeaderCell.self, "Other Section")
+        let otherSection = CellCouplerSection(header: otherSectionHeader, couplers: [other])
+        
+        //Update Table
+        set(sections: [testSection, otherSection], withReload: false)
+        tableview.reloadSections([0, 1], with: .automatic)
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 open class CouplerTableSource: NSObject {
-    public var sections: [BaseSection] = []
+    public var sections: [CellCouplerSection] = []
     public var tableview: UITableView
     
     //Init
@@ -22,7 +22,7 @@ open class CouplerTableSource: NSObject {
     
     
     //Setters
-    open func set(sections: [BaseSection], withReload: Bool = true) {
+    open func set(sections: [CellCouplerSection], withReload: Bool = true) {
         self.sections = sections
         
         if withReload == true {
@@ -30,8 +30,8 @@ open class CouplerTableSource: NSObject {
         }
     }
     
-    open func set(couplers: [BaseCoupler], withReload: Bool = true) {
-        self.sections = [BaseSection(couplers: couplers)]
+    open func set(couplers: [BaseCellCoupler], withReload: Bool = true) {
+        self.sections = [CellCouplerSection(couplers: couplers)]
         
         if withReload == true {
             tableview.reloadData()
@@ -39,14 +39,14 @@ open class CouplerTableSource: NSObject {
     }
     
     open func set<T>(with items: [T], cellType: ReusableCell<T>.Type, didSelect: ((T) -> Void)? = nil, withReload: Bool = true) {
-        var couplers: [Coupler<T>] = []
+        var couplers: [CellCoupler<T>] = []
         for item in items {
-            couplers.append(Coupler(cellType, item) { (indexPath: IndexPath) -> Void in
+            couplers.append(CellCoupler(cellType, item) { (indexPath: IndexPath) -> Void in
                 didSelect?(item)
             })
         }
         
-        self.sections = [BaseSection(couplers: couplers)]
+        self.sections = [CellCouplerSection(couplers: couplers)]
         
         if withReload == true {
             tableview.reloadData()
@@ -55,6 +55,7 @@ open class CouplerTableSource: NSObject {
 }
 
 extension CouplerTableSource: UITableViewDataSource {
+    //Counts
     open func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
@@ -63,16 +64,28 @@ extension CouplerTableSource: UITableViewDataSource {
         return sections[section].couplers.count
     }
     
+    //Cell
     open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return tableView.setupCell(info: sections[indexPath.section].couplers[indexPath.row])
     }
     
-    open func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return ""//sections[section].sectionData as? String
+    
+    //Header
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let header = sections[section].header else {
+            return nil
+        }
+        
+        return tableView.setupCell(info: header)
     }
     
-    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return nil//tableView.setupCell(info: sections[section])
+    //Footer
+    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        guard let footer = sections[section].footer else {
+            return nil
+        }
+        
+        return tableView.setupCell(info: footer)
     }
 }
 

@@ -1,5 +1,5 @@
 PODS:
-  - CellDataCoupler (1.0.0)
+  - CellDataCoupler (1.0.3)
 
 DEPENDENCIES:
   - CellDataCoupler (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CellDataCoupler: 1151d3cd3b8b38723adaf8f6f65298c217c78583
+  CellDataCoupler: 717cfd87f7e48f9ffbef369d96659e682c379b87
 
 PODFILE CHECKSUM: be5a58716e4763fcdb6be50551c17f2d7da75252
 

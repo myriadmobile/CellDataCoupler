@@ -19,7 +19,7 @@ open class ReusableCell<T> : BaseReusableCell {
     }
     
     open override func setupAny(_ info: Any?) {
-        if let info = info as? Coupler<T> {
+        if let info = info as? CellCoupler<T> {
             setup(info.data)
         } else if info != nil {
             print("Warning: The data type was not as expected for the ReusableCell.")
@@ -29,10 +29,9 @@ open class ReusableCell<T> : BaseReusableCell {
     }
 }
 
-//Cell
-open class BaseCoupler: NSObject {
-    public let cellType: BaseReusableCell.Type
-    public let didSelect: ((IndexPath) -> Void)?
+open class BaseCellCoupler: NSObject {
+    public var cellType: BaseReusableCell.Type
+    public var didSelect: ((IndexPath) -> Void)?
     
     public init(cellType: BaseReusableCell.Type, didSelect: ((IndexPath) -> Void)? = nil) {
         self.cellType = cellType
@@ -40,7 +39,7 @@ open class BaseCoupler: NSObject {
     }
 }
 
-open class Coupler<T>: BaseCoupler {
+open class CellCoupler<T>: BaseCellCoupler {
     public let data: T?
     
     public init(_ cellType: ReusableCell<T>.Type, _ data: T?, didSelect: ((IndexPath) -> Void)? = nil) {
@@ -49,25 +48,15 @@ open class Coupler<T>: BaseCoupler {
     }
 }
 
-//Section
-open class BaseSection: NSObject {
-    public let couplers: [BaseCoupler]
+open class CellCouplerSection {
+    public var header: BaseCellCoupler?
+    public var footer: BaseCellCoupler?
     
-    public init(couplers: [BaseCoupler]) {
+    public var couplers: [BaseCellCoupler] = []
+    
+    public init(header: BaseCellCoupler? = nil, footer: BaseCellCoupler? = nil, couplers: [BaseCellCoupler]) {
+        self.header = header
+        self.footer = footer
         self.couplers = couplers
-    }
-}
-
-open class CouplerSection<T>: BaseSection {
-    public let headerType: BaseReusableCell.Type?
-    public let headerData: T?
-    
-    public var footerType: BaseReusableCell.Type?
-    public var footerData: T?
-    
-    public init(_ headerType: ReusableCell<T>.Type?, _ headerData: T?, _ couplers: [BaseCoupler]) {
-        self.headerType = headerType
-        self.headerData = headerData
-        super.init(couplers: couplers)
     }
 }

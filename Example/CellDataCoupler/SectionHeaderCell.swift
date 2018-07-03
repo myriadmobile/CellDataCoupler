@@ -1,5 +1,5 @@
 //
-//  SectionTest.swift
+//  SectionHeaderCell.swift
 //  CellDataCoupler_Example
 //
 //  Created by Alex Larson on 6/29/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SectionTest: BaseTableViewCell<String> {
+class SectionHeaderCell: BaseTableViewCell<String> {
     
     @IBOutlet weak var myLabel: UILabel!
     

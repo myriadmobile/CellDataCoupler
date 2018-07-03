@@ -38,7 +38,7 @@ extension UITableView {
         return cell as! T
     }
     
-    public func setupCell(info: BaseCoupler) -> BaseReusableCell {
+    public func setupCell(info: BaseCellCoupler) -> BaseReusableCell {
         let output = getCell(forType: info.cellType)
         if info.didSelect == nil {
             output.selectionStyle = .none
