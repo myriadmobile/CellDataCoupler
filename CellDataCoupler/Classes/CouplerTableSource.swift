@@ -7,6 +7,14 @@
 
 import Foundation
 
+//IMPORTANT: Keep this class in this file. If it is moved to Base.swift - the "set" function with the cellType parameters breaks. We are unsure why.
+open class BaseReusableCell: UITableViewCell, IdentifiableView {
+    open func setupAny(_ info: Any?) {
+        print("Warning: You need to override the setup method.")
+    }
+}
+//IMPORTANT
+
 open class CouplerTableSource: NSObject {
     public var sections: [CellCouplerSection] = []
     public var tableview: UITableView
@@ -19,7 +27,6 @@ open class CouplerTableSource: NSObject {
         self.tableview.delegate = self
         self.tableview.dataSource = self
     }
-    
     
     //Setters
     open func set(sections: [CellCouplerSection], withReload: Bool = true) {

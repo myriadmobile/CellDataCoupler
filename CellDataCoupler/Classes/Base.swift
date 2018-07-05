@@ -7,12 +7,6 @@
 
 import UIKit
 
-open class BaseReusableCell: UITableViewCell, IdentifiableView {
-    open func setupAny(_ info: Any?) {
-        print("Warning: You need to override the setup method.")
-    }
-}
-
 open class ReusableCell<T> : BaseReusableCell {
     open func setup(_ info: T?) {
         print("Warning: You need to override the setup method.")
