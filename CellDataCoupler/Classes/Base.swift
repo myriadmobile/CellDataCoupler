@@ -46,11 +46,40 @@ open class CellCouplerSection {
     public var header: BaseCellCoupler?
     public var footer: BaseCellCoupler?
     
-    public var couplers: [BaseCellCoupler] = []
+    public var factory: CouplerFactory
     
-    public init(header: BaseCellCoupler? = nil, footer: BaseCellCoupler? = nil, couplers: [BaseCellCoupler]) {
+    public init(header: BaseCellCoupler? = nil, footer: BaseCellCoupler? = nil, factory: CouplerFactory) {
         self.header = header
         self.footer = footer
-        self.couplers = couplers
+        self.factory = factory
+    }
+    
+    public convenience init(header: BaseCellCoupler? = nil, footer: BaseCellCoupler? = nil, couplers: [BaseCellCoupler]) {
+        self.init(header: header, footer: footer, factory: CouplerFactory(couplers: couplers))
+    }
+}
+
+open class CouplerFactory {
+    public typealias CountFetch = (() -> Int)
+    public typealias CouplerFetch = ((Int) -> BaseCellCoupler)
+
+    public var countFetch: CountFetch
+    public var couplerFetch: CouplerFetch
+    
+    public init(countFetch: @escaping CountFetch, couplerFetch: @escaping CouplerFetch) {
+        self.countFetch = countFetch
+        self.couplerFetch = couplerFetch
+    }
+    
+    public convenience init(count: Int, couplerFetch: @escaping CouplerFetch) {
+        self.init(countFetch: { () -> Int in
+            return count
+        }, couplerFetch: couplerFetch)
+    }
+    
+    public convenience init(couplers: [BaseCellCoupler]) {
+        self.init(count: couplers.count) { (index) -> BaseCellCoupler in
+            return couplers[index]
+        }
     }
 }
