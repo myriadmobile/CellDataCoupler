@@ -68,7 +68,7 @@ extension CouplerTableSource: UITableViewDataSource {
     }
     
     open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].factory.countFetch()
+        return sections[section].factory.count
     }
     
     //Cell

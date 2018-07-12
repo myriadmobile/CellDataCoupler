@@ -60,21 +60,14 @@ open class CellCouplerSection {
 }
 
 open class CouplerFactory {
-    public typealias CountFetch = (() -> Int)
     public typealias CouplerFetch = ((Int) -> BaseCellCoupler)
 
-    public var countFetch: CountFetch
+    public var count: Int
     public var couplerFetch: CouplerFetch
     
-    public init(countFetch: @escaping CountFetch, couplerFetch: @escaping CouplerFetch) {
-        self.countFetch = countFetch
+    public init(count: Int, couplerFetch: @escaping CouplerFetch) {
+        self.count = count
         self.couplerFetch = couplerFetch
-    }
-    
-    public convenience init(count: Int, couplerFetch: @escaping CouplerFetch) {
-        self.init(countFetch: { () -> Int in
-            return count
-        }, couplerFetch: couplerFetch)
     }
     
     public convenience init(couplers: [BaseCellCoupler]) {
