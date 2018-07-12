@@ -28,20 +28,14 @@ class TableSource: CouplerTableSource {
         let generic = CellCoupler(PersonCell.self, PersonCellData(person, nil)) { (indexPath) -> Void in
             print("Testing")
         }
-        
         let testSectionHeader = CellCoupler(SectionHeaderCell.self, "Test Section Test Section Test Section Test Section Test Section Test Section Test Section")
         let staticSection = CellCouplerSection(header: testSectionHeader, couplers: [name, home, generic])
         
         // Dynamic Section
-//        let other = CellCoupler(FormTestCell.self, "Some other cell")
-//
-        let dynamicSectionHeader = CellCoupler(FormTestCell.self, "Other Section")
-//        let otherSection = CellCouplerSection(header: otherSectionHeader, couplers: [other])
-        
+        let dynamicSectionHeader = CellCoupler(SectionHeaderCell.self, "Dynamic Section")
         let dynamicData = ["test1", "test2", "test3"]
-        
         let dynamicSection = CellCouplerSection(header: dynamicSectionHeader, factory: CouplerFactory(count: dynamicData.count, couplerFetch: { (index) -> BaseCellCoupler in
-            return CellCoupler(SectionHeaderCell.self, dynamicData[index])
+            return CellCoupler(FormTestCell.self, dynamicData[index])
         }))
         
         // Update Table
