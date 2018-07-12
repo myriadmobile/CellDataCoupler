@@ -62,17 +62,33 @@ open class CellCouplerSection {
 open class CouplerFactory {
     public typealias CouplerFetch = ((Int) -> BaseCellCoupler)
 
-    public var count: Int
-    public var couplerFetch: CouplerFetch
+    private var count: Int
+    private var couplerFetch: CouplerFetch
+    private var cache: [Int: BaseCellCoupler]?
     
-    public init(count: Int, couplerFetch: @escaping CouplerFetch) {
+    public init(count: Int, couplerFetch: @escaping CouplerFetch, cached: Bool = true) {
         self.count = count
         self.couplerFetch = couplerFetch
+        cache = cached ? [:] : nil
     }
     
-    public convenience init(couplers: [BaseCellCoupler]) {
-        self.init(count: couplers.count) { (index) -> BaseCellCoupler in
+    internal convenience init(couplers: [BaseCellCoupler]) {
+        self.init(count: couplers.count, couplerFetch: { (index) -> BaseCellCoupler in
             return couplers[index]
+        }, cached: false)
+    }
+    
+    public func numberOfItems() -> Int {
+        return count
+    }
+    
+    public func getItem(for index: Int) -> BaseCellCoupler {
+        if let cache = cache, let cachedItem = cache[index] {
+            return cachedItem
         }
+        
+        let item = couplerFetch(index)
+        cache?[index] = item
+        return item
     }
 }

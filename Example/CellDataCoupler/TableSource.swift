@@ -33,10 +33,11 @@ class TableSource: CouplerTableSource {
         
         // Dynamic Section
         let dynamicSectionHeader = CellCoupler(SectionHeaderCell.self, "Dynamic Section")
-        let dynamicData = ["test1", "test2", "test3"]
-        let dynamicSection = CellCouplerSection(header: dynamicSectionHeader, factory: CouplerFactory(count: dynamicData.count, couplerFetch: { (index) -> BaseCellCoupler in
+        let dynamicData = ["test1", "test2", "test3", "test4", "test5", "test6", "test7"]
+        let factory = CouplerFactory(count: dynamicData.count, couplerFetch: { (index) -> BaseCellCoupler in
             return CellCoupler(FormTestCell.self, dynamicData[index])
-        }))
+        })
+        let dynamicSection = CellCouplerSection(header: dynamicSectionHeader, factory: factory)
         
         // Update Table
         set(sections: [staticSection, dynamicSection], withReload: false)
