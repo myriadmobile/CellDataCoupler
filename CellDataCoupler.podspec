@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CellDataCoupler'
-  s.version          = '1.1.1'
+  s.version          = '1.1.2'
   s.summary          = 'CellDataCoupler is a pod that abstracts away a lot of the logic involved in creating a viable table datasource.'
 
 

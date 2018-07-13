@@ -78,7 +78,7 @@ extension CouplerTableSource: UITableViewDataSource {
     
     
     //Header
-    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    open func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let header = sections[section].header else {
             return nil
         }
@@ -87,7 +87,7 @@ extension CouplerTableSource: UITableViewDataSource {
     }
     
     //Footer
-    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    open func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         guard let footer = sections[section].footer else {
             return nil
         }
