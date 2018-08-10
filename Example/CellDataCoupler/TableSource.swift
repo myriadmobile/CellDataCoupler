@@ -22,24 +22,25 @@ class TableSource: CouplerTableSource {
     }
     
     func updatePerson(_ person: Person?) {
-        //Test Section
+        // Static Section
         let name = CellCoupler(FormTestCell.self, "Name: \(person?.name ?? "-")")
         let home = CellCoupler(FormTestCell.self, "Homeworld: \(person?.test ?? "-")")
         let generic = CellCoupler(PersonCell.self, PersonCellData(person, nil)) { (indexPath) -> Void in
             print("Testing")
         }
-        
         let testSectionHeader = CellCoupler(SectionHeaderCell.self, "Test Section Test Section Test Section Test Section Test Section Test Section Test Section")
-        let testSection = CellCouplerSection(header: testSectionHeader, couplers: [name, home, generic])
+        let staticSection = CellCouplerSection(header: testSectionHeader, couplers: [name, home, generic])
         
-        //Other Section
-        let other = CellCoupler(FormTestCell.self, "Some other cell")
+        // Dynamic Section
+        let dynamicSectionHeader = CellCoupler(SectionHeaderCell.self, "Dynamic Section")
+        let dynamicData = ["test1", "test2", "test3", "test4", "test5", "test6", "test7"]
+        let factory = CouplerFactory(count: dynamicData.count, couplerFetch: { (index) -> BaseCellCoupler in
+            return CellCoupler(FormTestCell.self, dynamicData[index])
+        })
+        let dynamicSection = CellCouplerSection(header: dynamicSectionHeader, factory: factory)
         
-        let otherSectionHeader = CellCoupler(SectionHeaderCell.self, "Other Section")
-        let otherSection = CellCouplerSection(header: otherSectionHeader, couplers: [other])
-        
-        //Update Table
-        set(sections: [testSection, otherSection], withReload: false)
+        // Update Table
+        set(sections: [staticSection, dynamicSection], withReload: false)
         tableview.reloadSections([0, 1], with: .automatic)
     }
 }

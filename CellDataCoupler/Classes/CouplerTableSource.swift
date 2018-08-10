@@ -68,12 +68,13 @@ extension CouplerTableSource: UITableViewDataSource {
     }
     
     open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].couplers.count
+        return sections[section].factory.numberOfItems()
     }
     
     //Cell
     open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.setupCell(info: sections[indexPath.section].couplers[indexPath.row])
+        let coupler = sections[indexPath.section].factory.getItem(for: indexPath.row)
+        return tableView.setupCell(info: coupler)
     }
     
     
@@ -99,6 +100,7 @@ extension CouplerTableSource: UITableViewDataSource {
 extension CouplerTableSource: UITableViewDelegate {
     open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        sections[indexPath.section].couplers[indexPath.row].didSelect?(indexPath)
+        let coupler = sections[indexPath.section].factory.getItem(for: indexPath.row)
+        coupler.didSelect?(indexPath)
     }
 }
