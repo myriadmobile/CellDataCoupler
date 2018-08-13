@@ -8,18 +8,23 @@
 import UIKit
 
 open class ReusableCell<T> : BaseReusableCell {
+    public private(set) var info: T?
+    
     open func setup(_ info: T?) {
         print("Warning: You need to override the setup method.")
     }
     
-    open override func setupAny(_ info: Any?) {
-        if let info = info as? CellCoupler<T> {
-            setup(info.data)
-        } else if info != nil {
+    open override func setupAny(_ coupler: Any?) {
+        if let coupler = coupler as? CellCoupler<T> {
+            info = coupler.data
+        } else if coupler != nil {
+            info = nil
             print("Warning: The data type was not as expected for the ReusableCell.")
         } else {
-            setup(nil)
+            info = nil
         }
+        
+        setup(info)
     }
 }
 
