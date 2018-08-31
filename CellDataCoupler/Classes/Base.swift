@@ -10,7 +10,7 @@ import UIKit
 open class ReusableCell<T> : BaseReusableCell {
     public private(set) var info: T?
     
-    open func setup(_ info: T?) {
+    open func setup() {
         print("Warning: You need to override the setup method.")
     }
     
@@ -24,7 +24,7 @@ open class ReusableCell<T> : BaseReusableCell {
             info = nil
         }
         
-        setup(info)
+        setup()
     }
 }
 
