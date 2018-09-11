@@ -84,7 +84,7 @@ extension CouplerTableSource: UITableViewDataSource {
             return nil
         }
         
-        return tableView.setupCell(info: header)
+        return tableView.setupCell(info: header).contentView
     }
     
     //Footer
@@ -93,7 +93,7 @@ extension CouplerTableSource: UITableViewDataSource {
             return nil
         }
         
-        return tableView.setupCell(info: footer)
+        return tableView.setupCell(info: footer).contentView
     }
 }
 
