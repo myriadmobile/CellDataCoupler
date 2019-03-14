@@ -13,7 +13,7 @@ class FormTestCell: BaseTableViewCell<String> {
     
     @IBOutlet weak var myLabel: UILabel!
     
-    override func setup(_ info: String?) {
+    override func setup() {
         myLabel.text = info
     }
 }

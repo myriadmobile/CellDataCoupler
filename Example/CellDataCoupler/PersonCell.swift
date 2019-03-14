@@ -15,7 +15,7 @@ class PersonCell: BaseTableViewCell<PersonCellData> {
     
     @IBOutlet weak var myLabel: UILabel!
     
-    override func setup(_ info: PersonCellData?) {
+    override func setup() {
         myLabel.text = "\(info?.person?.name ?? "")  \(info?.person?.test ?? "")"
     }
 }

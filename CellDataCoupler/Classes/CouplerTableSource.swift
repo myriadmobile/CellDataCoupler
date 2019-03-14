@@ -5,7 +5,7 @@
 //  Copyright © 2018 Myriad Mobile. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 //IMPORTANT: Keep this class in this file. If it is moved to Base.swift - the "set" function with the cellType parameters breaks. We are unsure why.
 open class BaseReusableCell: UITableViewCell, IdentifiableView {
@@ -73,7 +73,12 @@ extension CouplerTableSource: UITableViewDataSource {
     
     //Cell
     open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let coupler = sections[indexPath.section].factory.getItem(for: indexPath.row)
+        guard let coupler = sections[indexPath.section].factory.getItem(for: indexPath.row) else {
+            let errorCell = UITableViewCell()
+            errorCell.textLabel?.text = "CellDataCoupler Error - No Coupler Provided!"
+            return errorCell
+        }
+        
         return tableView.setupCell(info: coupler)
     }
     
@@ -98,9 +103,11 @@ extension CouplerTableSource: UITableViewDataSource {
 }
 
 extension CouplerTableSource: UITableViewDelegate {
+    
     open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let coupler = sections[indexPath.section].factory.getItem(for: indexPath.row)
-        coupler.didSelect?(indexPath)
+        coupler?.didSelect?(indexPath)
     }
+    
 }

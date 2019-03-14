@@ -65,8 +65,8 @@ open class CellCouplerSection {
 }
 
 open class CouplerFactory {
-    public typealias CouplerFetch = ((Int) -> BaseCellCoupler)
-
+    public typealias CouplerFetch = ((Int) -> BaseCellCoupler?)
+    
     private var count: Int
     private var couplerFetch: CouplerFetch
     private var cache: [Int: BaseCellCoupler]?
@@ -87,7 +87,7 @@ open class CouplerFactory {
         return count
     }
     
-    public func getItem(for index: Int) -> BaseCellCoupler {
+    public func getItem(for index: Int) -> BaseCellCoupler? {
         if let cache = cache, let cachedItem = cache[index] {
             return cachedItem
         }
