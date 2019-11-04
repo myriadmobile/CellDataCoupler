@@ -31,9 +31,11 @@ open class ReusableCell<T> : BaseReusableCell {
 open class BaseCellCoupler: NSObject {
     public var cellType: BaseReusableCell.Type
     public var didSelect: ((IndexPath) -> Void)?
+    public var editActions: [UITableViewRowAction]?
     
-    public init(cellType: BaseReusableCell.Type, didSelect: ((IndexPath) -> Void)? = nil) {
+    public init(cellType: BaseReusableCell.Type, editActions: [UITableViewRowAction]? = nil, didSelect: ((IndexPath) -> Void)? = nil) {
         self.cellType = cellType
+        self.editActions = editActions
         self.didSelect = didSelect
     }
 }
@@ -41,9 +43,9 @@ open class BaseCellCoupler: NSObject {
 open class CellCoupler<T>: BaseCellCoupler {
     public let data: T?
     
-    public init(_ cellType: ReusableCell<T>.Type, _ data: T?, didSelect: ((IndexPath) -> Void)? = nil) {
+    public init(_ cellType: ReusableCell<T>.Type, _ data: T?, editActions: [UITableViewRowAction]? = nil, didSelect: ((IndexPath) -> Void)? = nil) {
         self.data = data
-        super.init(cellType: cellType, didSelect: didSelect)
+        super.init(cellType: cellType, editActions: editActions,  didSelect: didSelect)
     }
 }
 

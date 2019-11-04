@@ -82,6 +82,10 @@ extension CouplerTableSource: UITableViewDataSource {
         return tableView.setupCell(info: coupler)
     }
     
+    public func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        guard let coupler = sections[indexPath.section].factory.getItem(for: indexPath.row) else { return nil }
+        return coupler.editActions
+    }
     
     //Header
     open func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
