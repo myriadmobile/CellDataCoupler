@@ -82,9 +82,16 @@ extension CouplerTableSource: UITableViewDataSource {
         return tableView.setupCell(info: coupler)
     }
     
-    public func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    public func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         guard let coupler = sections[indexPath.section].factory.getItem(for: indexPath.row) else { return nil }
-        return coupler.editActions
+        guard let actions = coupler.leadingActions else { return nil }
+        return UISwipeActionsConfiguration(actions: actions)
+    }
+    
+    public func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        guard let coupler = sections[indexPath.section].factory.getItem(for: indexPath.row) else { return nil }
+        guard let actions = coupler.trailingActions else { return nil }
+        return UISwipeActionsConfiguration(actions: actions)
     }
     
     //Header
