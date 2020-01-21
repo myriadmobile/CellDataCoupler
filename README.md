@@ -66,7 +66,7 @@ pod 'CellDataCoupler'
  Consider couplers as the bridge between tableview and cells. You can simply pass the type and data of a cell to CellCoupler. You can also pass a block of codes for handling the selection of a cell if needed. The big advantage of CellDataCoupler is that it handles different types of cells for you. [Check Advanced Usage for details](#advanced-usage). Then, call set function with couplers as the final step for populating data in tableview. 
   
   ```swift
-  var couplers = [BaseCoupler]()
+  var couplers = [BaseCellCoupler]()
   
   let personCoupler = CellCoupler(PersonCell.self, PersonCellData(name: "Mary", age: 28), didSelect: nil)
   couplers.append(personCoupler)
@@ -79,7 +79,7 @@ pod 'CellDataCoupler'
  CellDataCoupler helps you to handle different types of cells. As you do it for one type of cell, you can simply create couplers with different types of cells and data and add them to couplers. Then, just call set function with couplers. 
  
  ```swift
- var couplers = [BaseCoupler]()
+ var couplers = [BaseCellCoupler]()
  
  let personCoupler = CellCoupler(PersonCell.self, PersonCellData(name: "Smith", age: 34), didSelect: nil)
  couplers.append(personCoupler)
@@ -96,13 +96,13 @@ pod 'CellDataCoupler'
   ```swift 
   let titleCouper = CellCoupler(TitleLabelCell, TitleCellData(title: "title"), didSelect: nil)
   
-  let peopeleCoupler = [BaseCoupler]()
+  let peopleCouplers = [BaseCellCoupler]()
   for person in people {
        let personCoupler = CellCoupler(PersonCell.self, PersonCellData(name: "Pio", age: 17), didSelect: nil)
-       peopeleCoupler.append(personCoupler)
+       peopleCouplers.append(personCoupler)
   }
   
-  tableviewSource?.set(CellCouplerSection(header: titleCoupler, couplers: peopeleCoupler))
+  tableviewSource?.set(sections: [CellCouplerSection(header: titleCoupler, couplers: peopleCouplers)])
   
   ```
   
