@@ -11,6 +11,10 @@ public protocol IdentifiableView: class {
     static var defaultReuseIdentifier: String { get }
 }
 
+public protocol BundledIdentifiableView: IdentifiableView {
+    static var bundle: Bundle? { get }
+}
+
 extension IdentifiableView where Self: UITableViewCell {
     public static var defaultReuseIdentifier: String {
         return String(describing: self)

@@ -11,7 +11,7 @@ extension UITableView {
     public func getCell<T: BaseReusableCell>() -> T {
         var cell = self.dequeueReusableCell(withIdentifier: T.defaultReuseIdentifier)
         if cell == nil {
-            self.register(UINib(nibName: T.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: T.defaultReuseIdentifier)
+            self.register(UINib(nibName: T.defaultReuseIdentifier, bundle: (T.self as? BundledIdentifiableView.Type)?.bundle), forCellReuseIdentifier: T.defaultReuseIdentifier)
             cell = self.dequeueReusableCell(withIdentifier: T.defaultReuseIdentifier)
         }
         
@@ -27,7 +27,7 @@ extension UITableView {
     public func getCell<T: BaseReusableCell>(forType: T.Type) -> T {
         var cell = self.dequeueReusableCell(withIdentifier: forType.defaultReuseIdentifier)
         if cell == nil {
-            self.register(UINib(nibName: forType.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: forType.defaultReuseIdentifier)
+            self.register(UINib(nibName: forType.defaultReuseIdentifier, bundle: (forType as? BundledIdentifiableView.Type)?.bundle), forCellReuseIdentifier: forType.defaultReuseIdentifier)
             cell = self.dequeueReusableCell(withIdentifier: forType.defaultReuseIdentifier)
         }
         
