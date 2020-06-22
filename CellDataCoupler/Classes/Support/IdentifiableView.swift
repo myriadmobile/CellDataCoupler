@@ -7,12 +7,16 @@
 
 import UIKit
 
-protocol IdentifiableView: class {
+public protocol IdentifiableView: class {
     static var defaultReuseIdentifier: String { get }
 }
 
+public protocol BundledIdentifiableView: IdentifiableView {
+    static var bundle: Bundle? { get }
+}
+
 extension IdentifiableView where Self: UITableViewCell {
-    static var defaultReuseIdentifier: String {
+    public static var defaultReuseIdentifier: String {
         return String(describing: self)
     }
 }
