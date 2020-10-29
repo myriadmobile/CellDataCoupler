@@ -106,21 +106,21 @@ pod 'CellDataCoupler'
   
   ```
   
-### Handling Huge Data
- You can utilize **CouplerFactory** when you have to handle huge data in tableview, but want performance. Tableview only populates a few items based on the size of a device. If users scroll down for more items, CouplerFactory provides the next items for tableview using cache. 
+### Handling Large Data
+ You can utilize **CouplerFactory** when you have to handle huge data in tableview, but want performance. Tableview only populates a few items based on the size of a device. If users scroll down for more items, CouplerFactory provides the next items for tableview using cache.
  
  Instead of manually creating and adding couplers for a huge amounts of data, you can simply create CouplerFactory with the number of couplers and the coupler fetch, which is responsible for indexing items of data. 
  
  ```swift
  let sectionHeader = CellCoupler(TitleLabelCell, TitleCellData(title: "title"), didSelect: nil)
   
- let itmes = [item1, item2, ..., item100]
- let couplerFactory = CouplerFactory(count: itmes.count, couplerFetch: { (index) -> BaseCellCoupler in
+ let items = [item1, item2, ..., item100]
+ let couplerFactory = CouplerFactory(count: items.count, couplerFetch: { (index) -> BaseCellCoupler in
       return CellCoupler(itemCell.self, items[index])
  })
  
  let section = CellCouplerSection(header: sectionHeader, factory: couplerFactory)
- tableviewSource?.set(sections: section) 
+ tableviewSource?.set(section: section) 
  ```
 
 ## Example Project
