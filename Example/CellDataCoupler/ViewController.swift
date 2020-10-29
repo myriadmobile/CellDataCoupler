@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var presenter: Presenter!
+    // You don't have to use a custom table source.  You can also just use CouplerTableSource and call the .set in the view controller.
     var tableSource: TableSource?
     
     //Lifecycle
@@ -32,7 +33,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: ViewDelegate {
-    func retrievedPerson(_ person: Person?) {
+    func retrievedPerson(_ person: Person) {
         tableSource?.updatePerson(person)
     }
 }
