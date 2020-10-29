@@ -1,5 +1,5 @@
 //
-//  TableViewExtension.swift
+//  TableViewExtensions.swift
 //
 //  Created by Alex Larson on 12/14/17.
 //  Copyright © 2017 Myriad Mobile. All rights reserved.
