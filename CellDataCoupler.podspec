@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CellDataCoupler'
-  s.version          = '3.1.0'
+  s.version          = '3.1.1'
   s.summary          = 'CellDataCoupler is a pod that abstracts away a lot of the logic involved in creating a viable table datasource.'
 
 
@@ -24,5 +24,6 @@ DESC
   s.ios.deployment_target = '11.0'
   s.swift_version = '4.0'
 
-  s.source_files = 'CellDataCoupler/Classes/**/*'
+  s.source_files = 'CellDataCoupler/Classes/**/*.{swift,h,m}'
+  s.resources = 'CellDataCoupler/Classes/**/*.{xib,storyboard,png,jpeg,jpg,txt,ttf,xcassets}'
 end
