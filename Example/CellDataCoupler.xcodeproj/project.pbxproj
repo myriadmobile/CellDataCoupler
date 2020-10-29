@@ -18,19 +18,18 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		8069415750BED8598B0A1A53 /* Pods_CellDataCoupler_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29F4A0218F6B3680412009D /* Pods_CellDataCoupler_Example.framework */; };
+		B767E28D1F10E30EE6A5DBB2 /* Pods_CellDataCoupler_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9598809BF6ED72559DC5F204 /* Pods_CellDataCoupler_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B52D1A71D92F4F2B5C35A07 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		1D809FB0B214F402E02DDAF1 /* Pods-CellDataCoupler_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CellDataCoupler_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CellDataCoupler_Tests/Pods-CellDataCoupler_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		31F4C47920E6E565004BC959 /* SectionHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCell.swift; sourceTree = "<group>"; };
 		31F71D8B20CF101A00FE539C /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		31F71D8D20CF10B400FE539C /* TableSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSource.swift; sourceTree = "<group>"; };
 		31F71D9A20CF28D200FE539C /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		31F71D9D20CF28EA00FE539C /* FormTestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTestCell.swift; sourceTree = "<group>"; };
 		31F71DA420D18F6100FE539C /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
-		597C3F8F0709092C259ACCDC /* Pods-CellDataCoupler_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CellDataCoupler_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CellDataCoupler_Tests/Pods-CellDataCoupler_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		401461E8F33E1EE37FEBB85C /* Pods-CellDataCoupler_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CellDataCoupler_Example.release.xcconfig"; path = "Target Support Files/Pods-CellDataCoupler_Example/Pods-CellDataCoupler_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CellDataCoupler_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellDataCoupler_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,12 +37,10 @@
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		707C1C257B24063506DE8138 /* Pods_CellDataCoupler_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CellDataCoupler_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F4348E8BD13728DEF4090D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		874F898E61BFCB3D3A51350E /* Pods-CellDataCoupler_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CellDataCoupler_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CellDataCoupler_Example/Pods-CellDataCoupler_Example.release.xcconfig"; sourceTree = "<group>"; };
 		8A8407774DE76C9717BA5963 /* CellDataCoupler.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CellDataCoupler.podspec; path = ../CellDataCoupler.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A240FF97BD18375F373EC9F3 /* Pods-CellDataCoupler_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CellDataCoupler_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CellDataCoupler_Example/Pods-CellDataCoupler_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D29F4A0218F6B3680412009D /* Pods_CellDataCoupler_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CellDataCoupler_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9598809BF6ED72559DC5F204 /* Pods_CellDataCoupler_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CellDataCoupler_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D218AC809B3CB031A813A9F5 /* Pods-CellDataCoupler_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CellDataCoupler_Example.debug.xcconfig"; path = "Target Support Files/Pods-CellDataCoupler_Example/Pods-CellDataCoupler_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,33 +48,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8069415750BED8598B0A1A53 /* Pods_CellDataCoupler_Example.framework in Frameworks */,
+				B767E28D1F10E30EE6A5DBB2 /* Pods_CellDataCoupler_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1E195ED64ACFBF27AB783884 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D29F4A0218F6B3680412009D /* Pods_CellDataCoupler_Example.framework */,
-				707C1C257B24063506DE8138 /* Pods_CellDataCoupler_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3175D10B68CAB9A354BC42B9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A240FF97BD18375F373EC9F3 /* Pods-CellDataCoupler_Example.debug.xcconfig */,
-				874F898E61BFCB3D3A51350E /* Pods-CellDataCoupler_Example.release.xcconfig */,
-				1D809FB0B214F402E02DDAF1 /* Pods-CellDataCoupler_Tests.debug.xcconfig */,
-				597C3F8F0709092C259ACCDC /* Pods-CellDataCoupler_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		31F71D9C20CF28D400FE539C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,8 +71,8 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for CellDataCoupler */,
 				607FACD11AFB9204008FA782 /* Products */,
-				3175D10B68CAB9A354BC42B9 /* Pods */,
-				1E195ED64ACFBF27AB783884 /* Frameworks */,
+				6D083255D57D3472B0B0074D /* Pods */,
+				6E33C368183A37FA221A97D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +120,24 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		6D083255D57D3472B0B0074D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D218AC809B3CB031A813A9F5 /* Pods-CellDataCoupler_Example.debug.xcconfig */,
+				401461E8F33E1EE37FEBB85C /* Pods-CellDataCoupler_Example.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6E33C368183A37FA221A97D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9598809BF6ED72559DC5F204 /* Pods_CellDataCoupler_Example.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,11 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "CellDataCoupler_Example" */;
 			buildPhases = (
-				9D7BFF70EAB86E673F8DE9A3 /* [CP] Check Pods Manifest.lock */,
+				60DD466D60D9A10FA6FC78AA /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				2D978B086DBD143A29262C81 /* [CP] Embed Pods Frameworks */,
+				D10DC0F0BB285129A52EEDC2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,7 +209,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2D978B086DBD143A29262C81 /* [CP] Embed Pods Frameworks */ = {
+		60DD466D60D9A10FA6FC78AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CellDataCoupler_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D10DC0F0BB285129A52EEDC2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -230,24 +247,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CellDataCoupler_Example/Pods-CellDataCoupler_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9D7BFF70EAB86E673F8DE9A3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CellDataCoupler_Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -391,7 +390,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A240FF97BD18375F373EC9F3 /* Pods-CellDataCoupler_Example.debug.xcconfig */;
+			baseConfigurationReference = D218AC809B3CB031A813A9F5 /* Pods-CellDataCoupler_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CellDataCoupler/Info.plist;
@@ -407,7 +406,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 874F898E61BFCB3D3A51350E /* Pods-CellDataCoupler_Example.release.xcconfig */;
+			baseConfigurationReference = 401461E8F33E1EE37FEBB85C /* Pods-CellDataCoupler_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CellDataCoupler/Info.plist;
