@@ -12,18 +12,19 @@ import CellDataCoupler
 class BaseTableViewCell<T>: ReusableCell<T> {
     var selectionColor: UIColor?
     
-    private func getSelectionColor() -> UIColor? {
-        if let selectionColor = selectionColor { return selectionColor }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         
+        //Default values - changing the selection color after the fact (such as in the setup method) will take precedence over this default behavior
         switch selectionStyle {
         case .blue:
-            return .blue
+            selectionColor = .blue
         case .gray:
-            return .lightGray
+            selectionColor = .lightGray
         case .none:
-            return nil
+            selectionColor = nil
         case .default:
-            return .lightGray
+            selectionColor = .lightGray
         }
     }
     
@@ -31,12 +32,12 @@ class BaseTableViewCell<T>: ReusableCell<T> {
         if highlighted == true {
             if animated == true {
                 UIView.animate(withDuration: 0.3, animations: {
-                    self.backgroundColor = self.getSelectionColor()
+                    self.backgroundColor = self.selectionColor
                 })
                 return
             }
             
-            backgroundColor = self.getSelectionColor()
+            backgroundColor = self.selectionColor
         } else {
             if animated == true {
                 UIView.animate(withDuration: 0.3, animations: {
@@ -53,12 +54,12 @@ class BaseTableViewCell<T>: ReusableCell<T> {
         if selected == true {
             if animated == true {
                 UIView.animate(withDuration: 0.3, animations: {
-                    self.backgroundColor = self.getSelectionColor()
+                    self.backgroundColor = self.selectionColor
                 })
                 return
             }
             
-            backgroundColor = self.getSelectionColor()
+            backgroundColor = self.selectionColor
         } else {
             if animated == true {
                 UIView.animate(withDuration: 0.3, animations: {
