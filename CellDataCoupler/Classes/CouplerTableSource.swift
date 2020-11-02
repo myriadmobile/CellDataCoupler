@@ -73,19 +73,19 @@ extension CouplerTableSource: UITableViewDataSource {
     
     //Cell
     open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let coupler = sections[indexPath.section].factory.getItem(for: indexPath.row)
+        let coupler = sections[indexPath.section].factory.getItem(for: indexPath.row) ?? BaseCellCoupler(cellType: EmptyCell.self)
         return tableView.setupCell(info: coupler)
     }
     
     public func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let coupler = sections[indexPath.section].factory.getItem(for: indexPath.row, forceCache: true)
-        guard let actions = coupler.leadingActions else { return UISwipeActionsConfiguration(actions: []) }
+        guard let actions = coupler?.leadingActions else { return UISwipeActionsConfiguration(actions: []) }
         return UISwipeActionsConfiguration(actions: actions)
     }
     
     public func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let coupler = sections[indexPath.section].factory.getItem(for: indexPath.row, forceCache: true)
-        guard let actions = coupler.trailingActions else { return UISwipeActionsConfiguration(actions: []) }
+        guard let actions = coupler?.trailingActions else { return UISwipeActionsConfiguration(actions: []) }
         return UISwipeActionsConfiguration(actions: actions)
     }
     
@@ -113,7 +113,7 @@ extension CouplerTableSource: UITableViewDelegate {
     open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let coupler = sections[indexPath.section].factory.getItem(for: indexPath.row, forceCache: true)
-        coupler.didSelect?(indexPath)
+        coupler?.didSelect?(indexPath)
     }
     
 }

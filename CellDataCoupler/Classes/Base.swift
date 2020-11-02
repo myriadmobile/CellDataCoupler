@@ -103,15 +103,15 @@ open class CouplerFactory {
         return count * countPerIteration
     }
     
-    public func getItem(for index: Int) -> BaseCellCoupler {
+    public func getItem(for index: Int) -> BaseCellCoupler? {
         return getItem(for: index, forceCache: false)
     }
     
-    internal func getItem(for index: Int, forceCache: Bool) -> BaseCellCoupler {
+    internal func getItem(for index: Int, forceCache: Bool) -> BaseCellCoupler? {
         let iterationIndex = index / countPerIteration
         let couplerIndex = index % countPerIteration
         
-        let forceCache = forceCache || (couplerIndex > 0)
+        let forceCache = forceCache || (couplerIndex > 0) // If couplerIndex is > 0, we've already invoked the multiCouplerFetch for this iterationIndex.  If for some reason we ask for a different index first, the cache won't contain it anyways, and it will be loaded.
         
         var couplers = [BaseCellCoupler]()
         
@@ -126,12 +126,12 @@ open class CouplerFactory {
             }
             
             if couplers.count > countPerIteration {
-                print("<WARNING> CouplerFactory: You specified \(countPerIteration) couplers would be returned per iteration, but found \(couplers.count) for index \(iterationIndex).  These extra couplers won't be used.")
+                print("<WARNING> CouplerFactory: You specified \(countPerIteration) couplers would be returned per iteration, but found \(couplers.count) for index \(iterationIndex).  Any extra couplers won't be used.")
             }
         }
         
         guard couplers.count > couplerIndex else {
-            return BaseCellCoupler(cellType: EmptyCell.self)
+            return nil
         }
         
         return couplers[couplerIndex]
