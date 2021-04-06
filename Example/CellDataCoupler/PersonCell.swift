@@ -9,13 +9,15 @@
 import Foundation
 import CellDataCoupler
 
-typealias PersonCellData = (person: Person?, action: ((Person) -> Void)?)
+struct PersonCellData {
+    var person: Person
+}
 
 class PersonCell: BaseTableViewCell<PersonCellData> {
     
     @IBOutlet weak var myLabel: UILabel!
     
     override func setup() {
-        myLabel.text = "\(info?.person?.name ?? "")  \(info?.person?.test ?? "")"
+        myLabel.text = "\(info?.person.firstName ?? "")  \(info?.person.lastName ?? "")"
     }
 }

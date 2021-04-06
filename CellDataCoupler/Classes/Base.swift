@@ -71,18 +71,30 @@ open class CellCouplerSection {
 }
 
 open class CouplerFactory {
-    public typealias CouplerFetch = ((Int) -> BaseCellCoupler?)
+    public typealias CouplerFetch = ((Int) -> BaseCellCoupler)
+    public typealias MultiCouplerFetch = ((Int) -> [BaseCellCoupler])
     
     private var count: Int
-    private var couplerFetch: CouplerFetch
-    private var cache: [Int: BaseCellCoupler]?
-    
-    public init(count: Int, couplerFetch: @escaping CouplerFetch, cached: Bool = true) {
-        self.count = count
-        self.couplerFetch = couplerFetch
-        cache = cached ? [:] : nil
+    private var countPerIteration: Int
+    private var couplerFetch: MultiCouplerFetch
+    private var cached: Bool
+    private var cache = [Int: [BaseCellCoupler]]()
+        
+    public init(iterationCount: Int, couplerCountPerIteration: Int, multiCouplerFetch: @escaping MultiCouplerFetch, cached: Bool = true) {
+        self.count = iterationCount
+        self.countPerIteration = couplerCountPerIteration
+        self.couplerFetch = multiCouplerFetch
+        self.cached = cached
     }
     
+    public convenience init(count: Int, couplerFetch: @escaping CouplerFetch, cached: Bool = true) {
+        let fetch: MultiCouplerFetch = { (index) -> [BaseCellCoupler] in
+            return [couplerFetch(index)]
+        }
+        
+        self.init(iterationCount: count, couplerCountPerIteration: 1, multiCouplerFetch: fetch, cached: cached)
+    }
+
     internal convenience init(couplers: [BaseCellCoupler]) {
         self.init(count: couplers.count, couplerFetch: { (index) -> BaseCellCoupler in
             return couplers[index]
@@ -90,16 +102,40 @@ open class CouplerFactory {
     }
     
     public func numberOfItems() -> Int {
-        return count
+        return count * countPerIteration
     }
     
     public func getItem(for index: Int) -> BaseCellCoupler? {
-        if let cache = cache, let cachedItem = cache[index] {
-            return cachedItem
+        return getItem(for: index, forceCache: false)
+    }
+    
+    internal func getItem(for index: Int, forceCache: Bool) -> BaseCellCoupler? {
+        let iterationIndex = index / countPerIteration
+        let couplerIndex = index % countPerIteration
+        
+        let forceCache = forceCache || (couplerIndex > 0) // If couplerIndex is > 0, we've already invoked the multiCouplerFetch for this iterationIndex.  If for some reason we ask for a different index first, the cache won't contain it anyways, and it will be loaded.
+        
+        var couplers = [BaseCellCoupler]()
+        
+        if cached || forceCache, let cachedCouplers = cache[iterationIndex] {
+            couplers = cachedCouplers
+        } else {
+            couplers = couplerFetch(iterationIndex)
+            cache[iterationIndex] = couplers
+            
+            if couplers.count < countPerIteration {
+                print("<WARNING> CouplerFactory: You specified \(countPerIteration) couplers would be returned per iteration, but only found \(couplers.count) for index \(iterationIndex).  An empty coupler will be used in its place.")
+            }
+            
+            if couplers.count > countPerIteration {
+                print("<WARNING> CouplerFactory: You specified \(countPerIteration) couplers would be returned per iteration, but found \(couplers.count) for index \(iterationIndex).  Any extra couplers won't be used.")
+            }
         }
         
-        let item = couplerFetch(index)
-        cache?[index] = item
-        return item
+        guard couplers.count > couplerIndex else {
+            return nil
+        }
+        
+        return couplers[couplerIndex]
     }
 }

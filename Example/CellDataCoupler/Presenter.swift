@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ViewDelegate: class {
-    func retrievedPerson(_ person: Person?)
+    func retrievedPerson(_ person: Person)
 }
 
 //No return statements
@@ -29,16 +29,14 @@ class Presenter: NSObject {
 //API
 extension Presenter {
     func getPerson(_ refresh: Bool = false) {
-        let person = Person()
-        person.name = "Testing"
-        person.test = "Testing 2"
+        let person = Person(firstName: "firstName", lastName: "lastName")
         self.view?.retrievedPerson(person)
     }
 }
 
 
-class Person
+struct Person
 {
-    var name = ""
-    var test = ""
+    var firstName: String?
+    var lastName: String?
 }

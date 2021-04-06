@@ -24,5 +24,6 @@ DESC
   s.ios.deployment_target = '11.0'
   s.swift_version = '4.0'
 
-  s.source_files = 'CellDataCoupler/Classes/**/*'
+  s.source_files = 'CellDataCoupler/Classes/**/*.{swift,h,m}'
+  s.resources = 'CellDataCoupler/Classes/**/*.{xib,storyboard,png,jpeg,jpg,txt,ttf,xcassets}'
 end
