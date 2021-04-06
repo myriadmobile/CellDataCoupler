@@ -29,12 +29,14 @@ open class ReusableCell<T> : BaseReusableCell {
 }
 
 open class BaseCellCoupler: NSObject {
+    
+    public typealias TapAction = (IndexPath) -> Void
     public var cellType: BaseReusableCell.Type
-    public var didSelect: ((IndexPath) -> Void)?
+    public var didSelect: TapAction?
     public var leadingActions: [UIContextualAction]?
     public var trailingActions: [UIContextualAction]?
     
-    public init(cellType: BaseReusableCell.Type, leadingActions: [UIContextualAction]? = nil, trailingActions: [UIContextualAction]? = nil, didSelect: ((IndexPath) -> Void)? = nil) {
+    public init(cellType: BaseReusableCell.Type, leadingActions: [UIContextualAction]? = nil, trailingActions: [UIContextualAction]? = nil, didSelect: TapAction? = nil) {
         self.cellType = cellType
         self.leadingActions = leadingActions
         self.trailingActions = trailingActions
